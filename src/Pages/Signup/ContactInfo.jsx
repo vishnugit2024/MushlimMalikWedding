@@ -9,7 +9,7 @@ const ContactInfo = ({ formData, handleChange, goToTab }) => {
         <form>
           <div className="row">
             <div className="col-md-4">
-            <div className="form-field">
+              <div className="form-field">
                 <label htmlFor="phone">Phone <sup>*</sup></label>
                 <input
                   type="number"
@@ -24,26 +24,26 @@ const ContactInfo = ({ formData, handleChange, goToTab }) => {
 
             <div className="col-md-4">
               <div className="form-field">
-                <label htmlFor="House" className="label-main" >House <sup>*</sup></label>
+                <label htmlFor="email" className="label-main">Email <sup>*</sup></label>
                 <input
-                  type="text"
-                  id="House"
-                  name="House"
-                  placeholder="Rental/Owned"
-                  value={formData.House}
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
                   onChange={handleChange}
                   required
                 />
               </div>
             </div>
+
             <div className="col-md-4">
               <div className="form-field">
-                <label htmlFor="City" className="label-main" >City <sup>*</sup></label>
+                <label htmlFor="city" className="label-main">City <sup>*</sup></label>
                 <input
                   type="text"
-                  id="City"
-                  name="City"
-                  value={formData.City}
+                  id="city"
+                  name="city"
+                  value={formData.city}
                   onChange={handleChange}
                   required
                 />
@@ -53,13 +53,13 @@ const ContactInfo = ({ formData, handleChange, goToTab }) => {
 
           <div className="row">
             <div className="col-md-4">
-            <div className="form-field">
-                <label htmlFor="State" className="label-main" >State <sup>*</sup></label>
+              <div className="form-field">
+                <label htmlFor="state" className="label-main">State <sup>*</sup></label>
                 <input
                   type="text"
-                  id="State"
-                  name="State"
-                  value={formData.State}
+                  id="state"
+                  name="state"
+                  value={formData.state}
                   onChange={handleChange}
                   required
                 />
@@ -67,26 +67,27 @@ const ContactInfo = ({ formData, handleChange, goToTab }) => {
             </div>
 
             <div className="col-md-4">
-            <div className="form-field">
-                <label htmlFor="Address" className="label-main" >Address<sup>*</sup></label>
+              <div className="form-field">
+                <label htmlFor="country" className="label-main">Country <sup>*</sup></label>
                 <input
                   type="text"
-                  id="Address"
-                  name="Address"
-                  value={formData.Address}
+                  id="country"
+                  name="country"
+                  value={formData.country}
                   onChange={handleChange}
                   required
                 />
               </div>
             </div>
+
             <div className="col-md-4">
-            <div className="form-field">
-                <label htmlFor="Pin" className="label-main" >Pin Code<sup>*</sup></label>
+              <div className="form-field">
+                <label htmlFor="pin" className="label-main">Pin Code <sup>*</sup></label>
                 <input
                   type="number"
-                  id="Pin"
-                  name="Pin"
-                  value={formData.Pin}
+                  id="pin"
+                  name="pin"
+                  value={formData.pin}
                   onChange={handleChange}
                   required
                 />
@@ -94,7 +95,11 @@ const ContactInfo = ({ formData, handleChange, goToTab }) => {
             </div>
           </div>
 
-          <button type="button" className="next-btn login-page-btn"  onClick={() => goToTab(3)}>
+          <button
+            type="button"
+            className="next-btn login-page-btn"
+            onClick={() => goToTab(3)}
+          >
             Next
           </button>
         </form>

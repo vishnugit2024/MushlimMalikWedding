@@ -185,6 +185,10 @@ margin-left: -2rem;
 margin-top: 0.25rem;
 }
 
+sup {
+  color: red;
+}
+
 /* Responsive Styles */
 @media screen and (max-width: 992px) {
   .Main-Form_container {

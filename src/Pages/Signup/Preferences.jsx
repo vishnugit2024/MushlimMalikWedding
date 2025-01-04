@@ -10,45 +10,36 @@ const Preferences = ({ formData, handleChange, goToTab }) => {
           <div className="row">
             <div className="col-md-4">
               <div className="form-field gender-style">
-                <label htmlFor="PartnerGender" className="label-main" >Preferred Partner Gender <sup>*</sup></label>
+                <label htmlFor="partnerGender" className="label-main">
+                  Preferred Partner Gender <sup>*</sup>
+                </label>
                 <select
-                  id="PartnerGender"
-                  name="PartnerGender"
+                  id="partnerGender"
+                  name="partnerGender"
                   className="select-style"
-                  value={formData.PartnerGender}
+                  value={formData.partnerGender}
                   onChange={handleChange}
                   required
                 >
                   <option value="" disabled>
                     Select Gender
                   </option>
-                  <option
-                    name="PartnerGender"
-                    value="male"
-                    checked={formData.PartnerGender === "male"}
-                    onChange={handleChange}
-                  >
-                    Male
-                  </option>
-                  <option
-                    name="PartnerGender"
-                    value="female"
-                    checked={formData.PartnerGender === "female"}
-                    onChange={handleChange}
-                  >
-                    Female
-                  </option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
                 </select>
               </div>
             </div>
+
             <div className="col-md-4">
               <div className="form-field">
-                <label htmlFor="WeddingBudget" className="label-main" >Wedding Budget <sup>*</sup></label>
+                <label htmlFor="weddingBudget" className="label-main">
+                  Wedding Budget <sup>*</sup>
+                </label>
                 <input
                   type="text"
-                  id="WeddingBudget"
-                  name="WeddingBudget"
-                  value={formData.WeddingBudget}
+                  id="weddingBudget"
+                  name="weddingBudget"
+                  value={formData.weddingBudget}
                   onChange={handleChange}
                   required
                 />
@@ -57,47 +48,26 @@ const Preferences = ({ formData, handleChange, goToTab }) => {
 
             <div className="col-md-4">
               <div className="form-field gender-style">
-                <label htmlFor="WeddingStyle" className="label-main" >Wedding Style <sup>*</sup></label>
+                <label htmlFor="weddingStyle" className="label-main">
+                  Wedding Style <sup>*</sup>
+                </label>
                 <select
-                  id="WeddingStyle"
-                  name="WeddingStyle"
+                  id="weddingStyle"
+                  name="weddingStyle"
                   className="select-style"
-                  value={formData.WeddingStyle}
+                  value={formData.weddingStyle}
                   onChange={handleChange}
                   required
                 >
                   <option value="" disabled>
                     Select Style
                   </option>
-                  <option
-                    name="WeddingStyle"
-                    value="Sunnati(Max 15 People)"
-                    checked={formData.WeddingStyle === "Sunnati(Max 15 People)"}
-                    onChange={handleChange}
-                  >
-                    Sunnati(Max 15 People)
-                  </option>
-                  <option
-                    name="WeddingStyle"
-                    value="Traditional"
-                    checked={formData.WeddingStyle === "Traditional"}
-                    onChange={handleChange}
-                  >
-                    Traditional
-                  </option>
-                  <option
-                    name="WeddingStyle"
-                    value="Expensive"
-                    checked={formData.WeddingStyle === "Expensive"}
-                    onChange={handleChange}
-                  >
-                    Expensive
-                  </option>
+                  <option value="Sunnati(Max 15 People)">Sunnati (Max 15 People)</option>
+                  <option value="Traditional">Traditional</option>
+                  <option value="Expensive">Expensive</option>
                 </select>
               </div>
             </div>
-
-            
           </div>
 
           <button type="button" className="next-btn login-page-btn" onClick={() => goToTab(4)}>

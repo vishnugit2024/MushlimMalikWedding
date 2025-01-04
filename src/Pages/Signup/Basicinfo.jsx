@@ -71,14 +71,14 @@ const Basicinfo = ({ formData, handleChange, goToTab }) => {
           <div className="row">
             <div className="col-md-4">
               <div className="form-field">
-                <label htmlFor="Fathername" className="label-main">
+                <label htmlFor="fatherName" className="label-main">
                   Father Name <sup>*</sup>
                 </label>
                 <input
                   type="text"
                   id="fatherName"
-                  name="Fathername"
-                  value={formData.Fathername}
+                  name="fatherName"
+                  value={formData.fatherName}
                   onChange={handleChange}
                   required
                 />
@@ -86,14 +86,14 @@ const Basicinfo = ({ formData, handleChange, goToTab }) => {
             </div>
             <div className="col-md-4">
               <div className="form-field">
-                <label htmlFor="Mothername" className="label-main">
+                <label htmlFor="motherName" className="label-main">
                   Mother Name
                 </label>
                 <input
                   type="text"
                   id="motherName"
-                  name="Mothername"
-                  value={formData.Mothername}
+                  name="motherName"
+                  value={formData.motherName}
                   onChange={handleChange}
                 />
               </div>
@@ -101,15 +101,15 @@ const Basicinfo = ({ formData, handleChange, goToTab }) => {
 
             <div className="col-md-4">
               <div className="form-field gender-style">
-                <label htmlFor="DOB" className="label-main">
+                <label htmlFor="dob" className="label-main">
                   Date of Birth <sup>*</sup>
                 </label>
                 <input
                   type="date"
                   id="dob"
-                  name="DOB"
+                  name="dob"
                   className="select-style"
-                  value={formData.DOB}
+                  value={formData.dob}
                   onChange={handleChange}
                   required
                 />
@@ -119,14 +119,14 @@ const Basicinfo = ({ formData, handleChange, goToTab }) => {
           <div className="row">
             <div className="col-md-4">
               <div className="form-field">
-                <label htmlFor="Religion" className="label-main">
-                  Grand Father Name <sup>*</sup>
+                <label htmlFor="height" className="label-main">
+                  Height<sup>*</sup>
                 </label>
                 <input
                   type="text"
-                  id="religion"
-                  name="Religion"
-                  value={formData.Religion}
+                  id="height"
+                  name="height"
+                  value={formData.height}
                   onChange={handleChange}
                   required
                 />
@@ -134,30 +134,46 @@ const Basicinfo = ({ formData, handleChange, goToTab }) => {
             </div>
             <div className="col-md-4">
               <div className="form-field">
-                <label htmlFor="Caste" className="label-main">
-                  Occupation<sup>*</sup>
+                <label htmlFor="religion" className="label-main">
+                  Grand Father Name <sup>*</sup>
                 </label>
                 <input
                   type="text"
-                  id="caste"
-                  name="Caste"
-                  value={formData.Caste}
+                  id="religion"
+                  name="religion"
+                  value={formData.religion}
                   onChange={handleChange}
                   required
                 />
               </div>
             </div>
-
+            <div className="col-md-4">
+              <div className="form-field">
+                <label htmlFor="pehchan" className="label-main">
+                  Belong (Pehchan)<sup>*</sup>
+                </label>
+                <input
+                  type="text"
+                  id="pehchan"
+                  name="pehchan"
+                  value={formData.pehchan}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+            </div>
+          </div>
+          <div className="row">
             <div className="col-md-4">
               <div className="form-field gender-style">
-                <label htmlFor="Gotra" className="label-main">
+                <label htmlFor="gotra" className="label-main">
                   Family Occupation Head <sup>*</sup>
                 </label>
                 <select
                   id="gotra"
-                  name="Gotra"
+                  name="gotra"
                   className="select-style"
-                  value={formData.Gotra}
+                  value={formData.gotra}
                   onChange={handleChange}
                   required
                 >
@@ -169,65 +185,31 @@ const Basicinfo = ({ formData, handleChange, goToTab }) => {
                 </select>
               </div>
             </div>
-          </div>
-          <div className="row">
             <div className="col-md-4">
               <div className="form-field">
-                <label htmlFor="Height" className="label-main">
-                  Height<sup>*</sup>
-                </label>
-                <input
-                  type="text"
-                  id="height"
-                  name="Height"
-                  value={formData.Height}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-            </div>
-            <div className="col-md-4">
-              <div className="form-field">
-                <label htmlFor="Pehchan" className="label-main">
-                  Belong (Pehchan)<sup>*</sup>
-                </label>
-                <input
-                  type="text"
-                  id="pehchan"
-                  name="Pehchan"
-                  value={formData.Pehchan}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-            </div>
-            <div className="col-md-4">
-              <div className="form-field">
-                <label htmlFor="Siblings" className="label-main">
+                <label htmlFor="siblings" className="label-main">
                   Number of Siblings<sup>*</sup>
                 </label>
                 <input
-                  type="text"
+                  type="number"
                   id="siblings"
-                  name="Siblings"
-                  value={formData.Siblings}
+                  name="siblings"
+                  value={formData.siblings}
                   onChange={handleChange}
                   required
                 />
               </div>
             </div>
-          </div>
-          <div className="row">
             <div className="col-md-4">
               <div className="form-field gender-style">
-                <label htmlFor="MarriedStatus" className="label-main">
+                <label htmlFor="marriedStatus" className="label-main">
                   Sibling Married Status <sup>*</sup>
                 </label>
                 <select
                   id="marriedStatus"
-                  name="MarriedStatus"
+                  name="marriedStatus"
                   className="select-style"
-                  value={formData.MarriedStatus}
+                  value={formData.marriedStatus}
                   onChange={handleChange}
                   required
                 >
@@ -237,20 +219,22 @@ const Basicinfo = ({ formData, handleChange, goToTab }) => {
                   <option value="UnMarried">UnMarried</option>
                   <option value="Married">Married</option>
                   <option value="Divorced">Divorced</option>
-                  <option value="Windowed">Windowed</option>
+                  <option value="Windowed">Widow</option>
                 </select>
               </div>
             </div>
+          </div>
+          <div className="row">
             <div className="col-md-4">
               <div className="form-field">
-                <label htmlFor="Education" className="label-main">
+                <label htmlFor="education" className="label-main">
                   Education<sup>*</sup>
                 </label>
                 <input
                   type="text"
                   id="education"
-                  name="Education"
-                  value={formData.Education}
+                  name="education"
+                  value={formData.education}
                   onChange={handleChange}
                   required
                 />
@@ -258,14 +242,29 @@ const Basicinfo = ({ formData, handleChange, goToTab }) => {
             </div>
             <div className="col-md-4">
               <div className="form-field">
-                <label htmlFor="Working" className="label-main">
+                <label htmlFor="working" className="label-main">
                   Working<sup>*</sup>
                 </label>
                 <input
                   type="text"
                   id="working"
-                  name="Working"
-                  value={formData.Working}
+                  name="working"
+                  value={formData.working}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+            </div>
+            <div className="col-md-4">
+              <div className="form-field">
+                <label htmlFor="annualIncome" className="label-main">
+                  Annual Income<sup>*</sup>
+                </label>
+                <input
+                  type="number"
+                  id="annualIncome"
+                  name="annualIncome"
+                  value={formData.annualIncome}
                   onChange={handleChange}
                   required
                 />
@@ -275,31 +274,24 @@ const Basicinfo = ({ formData, handleChange, goToTab }) => {
           <div className="row">
             <div className="col-md-4">
               <div className="form-field">
-                <label htmlFor="AnnualIncome" className="label-main">
-                  Annual Income<sup>*</sup>
-                </label>
-                <input
-                  type="text"
-                  id="annualIncome"
-                  name="AnnualIncome"
-                  value={formData.AnnualIncome}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
-            </div>
-            <div className="col-md-4">
-              <div className="form-field">
                 <label htmlFor="Password" className="label-main">
                   Create Password<sup>*</sup>
                 </label>
-                <input type={passwordVisible ? "text" : "password"} className="sign-up-password" required />
+                <input
+                  type={passwordVisible ? "text" : "password"}
+                  className="sign-up-password"
+                  required
+                />
                 <button
                   type="button"
                   className="signup-eye-icon"
                   onClick={togglePasswordVisibility}
                 >
-                  {passwordVisible ?  <i class="bi bi-eye-slash"></i> : <i class="bi bi-eye"></i>}
+                  {passwordVisible ? (
+                    <i class="bi bi-eye-slash"></i>
+                  ) : (
+                    <i class="bi bi-eye"></i>
+                  )}
                 </button>
               </div>
             </div>

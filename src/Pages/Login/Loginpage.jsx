@@ -63,7 +63,7 @@ const Loginpage = () => {
             <h2 className="login-heading">Login</h2>
             <div className="input-field">
               <input type="text" required />
-              <label>Enter your Email/Phone</label>
+              <label>Enter your Email</label>
             </div>
             <div className="input-field password-field">
               <input type={passwordVisible ? "text" : "password"} required />

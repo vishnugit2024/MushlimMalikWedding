@@ -8,32 +8,34 @@ import Review from "./Review";
 const SignupPage = () => {
   const [currentTab, setCurrentTab] = useState(1);
   const [formData, setFormData] = useState({
-    name: "",
+    fullName: "",
     age: "",
     gender: "",
-    Fathername: "",
-    Mothername: "",
-    DOB: "",
-    Religion: "",
-    Caste: "",
-    Gotra: "",
-    Height: "",
-    Pehchan: "",
-    Siblings: "",
-    MarriedStatus: "",
-    Education: "",
-    Working: "",
-    AnnualIncome: "",
-    phone: "",
-    House: "",
-    City: "",
-    State: "",
-    Address: "",
-    Pin: "",
-    PartnerGender: "",
-    WeddingBudget: "",
-    WeddingStyle: "",
+    fatherName: "",
+    motherName: "",
+    dob: "",
+    height: "",
+    religion: "",
+    pehchan: "",
+    gotra: "",
+    siblings: "",
+    marriedStatus: "",
+    education: "",
+    working: "",
+    annualIncome: "",
+    password: "",
+    profilePhoto: "",
+    phone: "", // For Phone Number
+    email: "", // For Email Address
+    city: "",  // For City
+    state: "", // For State
+    country: "", // For Country
+    pin: "",  
+    partnerGender: "",   // Stores the preferred partner's gender
+    weddingBudget: "",   // Stores the budget for the wedding
+    weddingStyle: "", 
   });
+  
 
   const handleChange = (e) => {
     const { name, value } = e.target;
