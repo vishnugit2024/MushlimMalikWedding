@@ -1,0 +1,138 @@
+.main-body {
+  padding: 15px;
+  margin-top: 20px;
+}
+.card {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  border-radius: 0.25rem;
+  background: #f7dfe4 !important;
+}
+
+.card-body {
+  flex: 1 1 auto;
+  min-height: 1px;
+  padding: 1rem;
+}
+
+.gutters-sm {
+  margin-right: -8px;
+  margin-left: -8px;
+}
+
+.gutters-sm > .col,
+.gutters-sm > [class*="col-"] {
+  padding-right: 8px;
+  padding-left: 8px;
+}
+.mb-3,
+.my-3 {
+  margin-bottom: 1rem !important;
+}
+
+.h-100 {
+  height: 100% !important;
+}
+.shadow-none {
+  box-shadow: none !important;
+}
+
+.profile-data .userprofile-logout {
+  background: var(--font-color);
+  text-decoration: none;
+  color: #fff;
+  margin-right: 0.25rem;
+}
+
+.profile-data .userprofile-creataccount {
+  background: gray;
+  color: #fff;
+  text-decoration: none;
+}
+
+.profile-data .userprofile-logout:hover {
+  background: var(--font-color);
+  color: #fff;
+}
+
+.profile-data .userprofile-creataccount:hover {
+  background: gray;
+  color: #fff;
+}
+
+.list-group-item i,
+.material-icons {
+  color: var(--font-color);
+  margin-right: 0.25rem;
+}
+
+.modal-row {
+
+    --bs-gutter-y: -1rem !important;
+}
+
+.modal-overlay {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .modal-container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 800px; /* Increased max-width for larger modals */
+    position: relative;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .modal-container h2 {
+    font-size: 24px;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--font-color);
+  }
+
+.modal-container .form-group label {
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  .modal-container .form-group .form-control {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 8px;
+  }
+
+  
+  .modal-container .btn {
+    margin-right: 10px;
+  }
+
+  .modal-container .save-change {
+    background: var(--font-color);
+    color: white;
+  }
+
+  .modal-container .save-change:hover {
+    background: var(--font-color);
+    color: white;
+  }
+  

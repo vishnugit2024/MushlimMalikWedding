@@ -1,0 +1,74 @@
+
+  .slider-heading {
+    margin: 2rem 0;
+    color: #800020;
+    text-align: center;
+  }
+  
+  /* Slick Slide Styling */
+  .slick-slide {
+    position: relative;
+    padding: 0 10px; /* Adds gap between slides */
+  }
+  
+  /* Slider Item Styling */
+  .slider-item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Image Container Styling */
+  .image-container {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Adjust height as needed */
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Image Styling */
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+  }
+  
+  /* Hover Effect: Zoom In for the hovered image */
+  .image-container:hover img {
+    transform: scale(1.1); /* Zoom effect on hover */
+  }
+  
+  /* Text Styling (Initially Hidden) */
+  .image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    text-align: center;
+    padding: 0 20px;
+  }
+  
+  /* Text Visibility on Hover */
+  .image-container:hover .image-text {
+    opacity: 1;
+  }
+  
+  /* Blur Effect on Other Slides */
+  .slider-container:hover .slick-slide .image-container img {
+    filter: blur(5px); /* Apply blur effect on all images */
+  }
+  
+  /* Remove blur for hovered slide */
+  .slider-container .slick-slide:hover .image-container img {
+    filter: none; /* Remove blur on the hovered image */
+    transition: filter 0.3s ease-in-out;
+  }
+
+  

@@ -1,0 +1,83 @@
+/* Container and Row Styles */
+.story-container {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.story-row {
+  align-items: center; /* Vertically aligns image and text */
+  margin-bottom: 1rem; /* Space between rows */
+}
+
+.story-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Image Styling */
+.story-img img {
+  width: 50%;
+  height: auto;
+  border-radius: 12px; /* Smooth rounded edges for images */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+/* Text Styling */
+.story-telling {
+  background-color: #ffffff; /* White background for text blocks */
+  border: 1px solid #fcd1d8; /* Light pink border */
+  padding: 1.5rem;
+  border-radius: 12px; /* Rounded edges */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow for elevation */
+}
+
+.story-telling h2 , .story-telling h4 {
+  font-weight: bold;
+  color: var(--font-color); /* Elegant pink for headings */
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.story-telling p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.home-story {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .story-img img {
+    margin-bottom: 1.5rem; /* Adds space between elements on smaller screens */
+  }
+
+  .story-telling {
+    text-align: center; /* Center text content for smaller screens */
+  }
+
+  .home-story {
+    display: none;
+}
+}
+
+@media (max-width: 575px) {
+  .story-telling h5 {
+    font-size: 1.5rem; /* Adjust heading size for very small screens */
+  }
+
+  .story-telling p {
+    font-size: 1rem; /* Adjust text size for very small screens */
+  }
+
+  .phone-story {
+    display: none;
+  }
+  
+ .home-story {
+    display: block;
+ }
+
+}
