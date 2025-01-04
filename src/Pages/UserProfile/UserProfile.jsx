@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import ReactModal from "react-modal";
 import "./userprofile.css";
 import { Link } from "react-router-dom";
-import userprofilepic from "../../Assets/Testimonial3.png";
 import AvatarEditor from "react-avatar-editor";
 
 ReactModal.setAppElement("#root"); // To prevent screen readers from reading background content
@@ -31,6 +30,11 @@ const UserProfile = () => {
     familyHead: "DynamicData",
   });
 
+  const [showAvatarEditor, setShowAvatarEditor] = useState(false);
+  const [profileImage, setProfileImage] = useState(null);
+  const [imageFile, setImageFile] = useState(null);
+  const editorRef = useRef(null);
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -41,6 +45,24 @@ const UserProfile = () => {
     console.log("Updated Data:", formData);
     alert("Profile updated successfully!");
     setShowModal(false); // Close the modal after submission
+  };
+
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      setImageFile(file);
+      setShowAvatarEditor(true);
+    }
+  };
+
+  const handleSaveImage = () => {
+    if (editorRef.current) {
+      const canvas = editorRef.current.getImageScaledToCanvas();
+      const croppedImage = canvas.toDataURL();
+      setProfileImage(croppedImage); // Update the profile image
+      setShowAvatarEditor(false); // Close the avatar editor
+      alert("Profile image updated successfully!");
+    }
   };
 
   return (
@@ -55,12 +77,21 @@ const UserProfile = () => {
                   <div className="card-body">
                     <div className="d-flex flex-column align-items-center text-center">
                       <img
-                        src={userprofilepic}
+                        src={profileImage || "https://via.placeholder.com/150"}
                         alt="Admin"
                         className="rounded-circle"
-                        width={150}
-                       
+                        width={200}
                       />
+
+                      <div className="d-flex justify-content-center align-items-center">
+                        <input
+                          type="file"
+                          accept="image/*"
+                          onChange={handleImageChange}
+                          className="btn btn-link"
+                        />
+                      </div>
+
                       <div className="profile-data mt-3">
                         <h4>{formData.name}</h4>
                         <p className="text-secondary mb-1">
@@ -69,6 +100,7 @@ const UserProfile = () => {
                         <p className="text-muted font-size-sm">
                           {formData.city}
                         </p>
+
                         <Link to="/">
                           <button className="btn userprofile-logout">
                             Log Out
@@ -129,6 +161,43 @@ const UserProfile = () => {
                   </ul>
                 </div>
               </div>
+
+              {/* Avatar Editor Modal */}
+              {showAvatarEditor && (
+                <ReactModal
+                  isOpen={showAvatarEditor}
+                  onRequestClose={() => setShowAvatarEditor(false)}
+                  className="modal-container"
+                  overlayClassName="modal-overlay"
+                >
+                  <h2>Edit Profile Image</h2>
+                  <AvatarEditor
+                    ref={editorRef}
+                    image={imageFile}
+                    width={200}
+                    height={200}
+                    border={50}
+                    borderRadius={100}
+                    className="d-flex m-auto"
+                    scale={1}
+                    color={[255, 255, 255, 0.6]} // RGBA
+                  />
+                  <div className="d-flex justify-content-center mt-3">
+                    <button
+                      className="btn save-change"
+                      onClick={handleSaveImage}
+                    >
+                      Save Image
+                    </button>
+                    <button
+                      className="btn btn-secondary"
+                      onClick={() => setShowAvatarEditor(false)}
+                    >
+                      Cancel
+                    </button>
+                  </div>
+                </ReactModal>
+              )}
 
               {/* Main Profile Data */}
               <div className="col-md-8">
