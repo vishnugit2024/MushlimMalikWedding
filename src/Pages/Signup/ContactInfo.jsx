@@ -68,7 +68,7 @@ const ContactInfo = ({ formData, handleChange, goToTab }) => {
 
             <div className="col-md-4">
             <div className="form-field">
-                <label htmlFor="Address" className="label-main" >Address <sup>*</sup></label>
+                <label htmlFor="Address" className="label-main" >Address<sup>*</sup></label>
                 <input
                   type="text"
                   id="Address"
@@ -81,7 +81,7 @@ const ContactInfo = ({ formData, handleChange, goToTab }) => {
             </div>
             <div className="col-md-4">
             <div className="form-field">
-                <label htmlFor="Pin" className="label-main" >Pin <sup>*</sup></label>
+                <label htmlFor="Pin" className="label-main" >Pin Code<sup>*</sup></label>
                 <input
                   type="number"
                   id="Pin"
