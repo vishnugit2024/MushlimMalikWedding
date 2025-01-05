@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Helmet } from "react-helmet";
 import "./ourstory.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -14,10 +15,20 @@ const OurStory = () => {
     AOS.init();
     // Refresh AOS animations after navigation
     AOS.refresh();
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   }, []);
 
   return (
     <>
+      <Helmet>
+        <title>Our Story | Mushlim Mushlim Mushlim Mushlim Muslim Malik Risthe</title>
+        <meta name="description" content="Discover Asif and Aisha's beautiful love story, from their first meeting to their magical wedding day." />
+      </Helmet>
+
       <section>
         <div className="page-header">
           <h2>Every Love Story is Beautiful</h2>
@@ -31,25 +42,24 @@ const OurStory = () => {
       <section>
         <div className="container story-container">
           <div className="row story-row">
-          <div className="Heading">
-            <h2>Our Story</h2>
-          </div>
+            <div className="Heading">
+              <h2>Our Story</h2>
+            </div>
             <div className="col-lg-6">
               <div className="story-img">
                 <img
                   src={Stroytelling2}
                   alt="Couple Images"
-                 
                 />
               </div>
             </div>
             <div className="col-lg-6">
-              <div className="story-telling " data-aos="zoom-in-up">
+              <div className="story-telling" data-aos="zoom-in-up">
                 <h2>
-                  First Meet <i class="bi bi-balloon-heart"></i>
+                  First Meet <i className="bi bi-balloon-heart"></i>
                 </h2>
                 <h4>
-                  Asif <i class="bi bi-arrow-through-heart"></i> Aisha{" "}
+                  Asif <i className="bi bi-arrow-through-heart"></i> Aisha
                 </h4>
                 <p>
                   Asif and Aisha's story began on a sunny sunset when their
@@ -76,9 +86,9 @@ const OurStory = () => {
 
             <div className="col-lg-6">
               <div className="story-telling" data-aos="zoom-in-up">
-                <h2>Proposal Day <i class="bi bi-flower3"></i> </h2>
+                <h2>Proposal Day <i className="bi bi-flower3"></i></h2>
                 <h4>
-                  Asif <i class="bi bi-arrow-through-heart"></i> Aisha{" "}
+                  Asif <i className="bi bi-arrow-through-heart"></i> Aisha
                 </h4>
 
                 <p>
@@ -116,10 +126,10 @@ const OurStory = () => {
             <div className="col-lg-6">
               <div className="story-telling" data-aos="zoom-in-up">
                 <h2>
-                  Wedding Day <i class="bi bi-heart-fill"></i>
+                  Wedding Day <i className="bi bi-heart-fill"></i>
                 </h2>
                 <h4>
-                  Asif <i class="bi bi-arrow-through-heart"></i> Aisha{" "}
+                  Asif <i className="bi bi-arrow-through-heart"></i> Aisha
                 </h4>
 
                 <p>

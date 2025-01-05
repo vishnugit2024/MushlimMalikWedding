@@ -10,6 +10,7 @@ import StoryImages from "../../Components/SuccesStory/StoryImages";
 import WeddingPlane from "../../Components/Planes/WeddingPlane";
 import WebsiteSubscribe from "../../Components/Subscribe/WebsiteSubscribe";
 import Feedback from "../../Components/Testimonial/Feedback";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
   useEffect(() => {
@@ -20,10 +21,52 @@ const Home = () => {
       easing: "ease-in-out", // Animation easing type
       once: false, // Whether animation happens only once
     });
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   }, []);
 
   return (
     <>
+      <Helmet>
+        <title>Find Your Soulmate - Muslim Malik Risthe</title>
+        <meta
+          name="description"
+          content="Discover meaningful connections and celebrate love with Muslim Malik Risthe. Find your perfect match today with millions of success stories."
+        />
+        <meta
+          name="keywords"
+          content="Muslim matchmaking, soulmate, Muslim matrimonial, Malik Risthe, perfect match, marriage platform"
+        />
+        <meta name="author" content="Muslim Malik Risthe" />
+        <meta
+          property="og:title"
+          content="Find Your Soulmate - Muslim Malik Risthe"
+        />
+        <meta
+          property="og:description"
+          content="Discover meaningful connections and celebrate love with Muslim Malik Risthe. Find your perfect match today with millions of success stories."
+        />
+        <meta property="og:image" content={heroimage} />
+        <meta property="og:url" content="https://your-website-url.com/" />
+        <meta property="og:type" content="website" />
+        <meta
+          name="twitter:card"
+          content="summary_large_image"
+        />
+        <meta
+          name="twitter:title"
+          content="Find Your Soulmate - Muslim Malik Risthe"
+        />
+        <meta
+          name="twitter:description"
+          content="Discover meaningful connections and celebrate love with Muslim Malik Risthe. Find your perfect match today with millions of success stories."
+        />
+        <meta name="twitter:image" content={heroimage} />
+      </Helmet>
+
       <div className="container-fluid p-0">
         <div className="hero-img">
           <img
@@ -33,7 +76,9 @@ const Home = () => {
           />
         </div>
         <div className="hero-text">
-          <h1 className="hero-heading">Find Your Soulmate on Muslim Malik Risthe</h1>
+          <h1 className="hero-heading">
+            Find Your Soulmate on Muslim Malik Risthe
+          </h1>
           <div className="hero-para-text">
             <h5 className="hero-paragraph">
               Discover meaningful connections and celebrate love with millions
@@ -60,8 +105,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-
-      {/* ================================================ */}
 
       <div className="container-fluid bg-light-pink">
         <div className="row">
@@ -105,7 +148,7 @@ const Home = () => {
               className="match-heading"
               data-aos="fade-up"
               data-aos-anchor-placement="center-center"
-              data-aos-duration="1200" // Duration in milliseconds (e.g., 1500ms = 1.5 seconds)
+              data-aos-duration="1200"
             >
               <h2>
                 Discover Your <br /> <span>Perfect Match</span>
@@ -114,42 +157,30 @@ const Home = () => {
           </div>
         </div>
       </div>
-      {/* ==================================== */}
+
       <section>
         <Storyslider />
       </section>
-      {/* ========================================= */}
       <section>
-        {" "}
-        <StoryImages />{" "}
+        <StoryImages />
       </section>
-
-      {/* ============================================== */}
       <section>
         <WeddingPlane />
-
         <div className="button-container">
           <Link to="/member">
             <button className="viewall-btn">View More</button>
           </Link>
         </div>
       </section>
-
-      {/* ======================================================= */}
       <section>
         <ImageGallery />
       </section>
-      {/* ====================================== */}
       <section>
         <WebsiteSubscribe />
       </section>
-      {/* =================================================== */}
-
       <section>
         <Feedback />
       </section>
-
-      {/* ====================================================== */}
     </>
   );
 };

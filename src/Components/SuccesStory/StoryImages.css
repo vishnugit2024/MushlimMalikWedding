@@ -27,22 +27,22 @@
 }
 
 .album .img {
-    width: 435px;
+    width: 420px;
     height: 295px;
     object-fit: cover;
     margin: 5px auto;
 }
 
 .album .responsive-container-block.img-cont {
-    display: flex;
-    flex-direction: row; /* Align images in a row */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    gap: 10px; /* Space between images */
+    display: flex
+    ;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
 }
 
 .album .img.img-big {
-    width: 665px;
+    width: 650px;
     height: 350px;
 }
 

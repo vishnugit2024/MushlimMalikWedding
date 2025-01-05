@@ -8,6 +8,8 @@ const Basicinfo = ({ formData, handleChange, goToTab }) => {
     setPasswordVisible(!passwordVisible);
   };
 
+  
+
   return (
     <>
       <div>

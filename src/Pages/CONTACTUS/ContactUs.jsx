@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
-import "./ContactUs.css";
+import { Helmet } from "react-helmet";
 import Swal from "sweetalert2";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import "./ContactUs.css";
 
 const ContactUs = () => {
   useEffect(() => {
@@ -59,6 +60,15 @@ const ContactUs = () => {
 
   return (
     <>
+      {/* Helmet for SEO */}
+      <Helmet>
+        <title>Contact Us - Mushlim Mushlim Mushlim Mushlim Muslim Malik Risthe</title>
+        <meta
+          name="description"
+          content="Get in touch with us for any inquiries or assistance. Let Mushlim Mushlim Mushlim Mushlim Mushlim Muslim Malik Risthe help you find the right partner."
+        />
+      </Helmet>
+
       <section>
         <div className="page-header">
           <h2>Let us Help You Find the Right Partner</h2>
@@ -75,20 +85,20 @@ const ContactUs = () => {
             {/* Contact Info Section */}
             <div className="row contact-info-page justify-content-center">
               <div className="col-md-3 info-box">
-                <i class="bi bi-geo-alt icon"></i>
+                <i className="bi bi-geo-alt icon"></i>
                 <a href=" " target="_blank" rel="noopener noreferrer">
                   Kirti Nagar , New Delhi-110077
                 </a>
               </div>
               <div className="col-md-3 info-box">
-                <i class="bi bi-envelope icon"></i>
+                <i className="bi bi-envelope icon"></i>
                 <p>
                   <a href="mailto:info@gmail.com">malikwedding@gmail.com</a>
                   <a href="mailto:info@gmail.com">malikwedding@gmail.com</a>
                 </p>
               </div>
               <div className="col-md-3 info-box">
-                <i class="bi bi-telephone icon"></i>
+                <i className="bi bi-telephone icon"></i>
                 <p>
                   <a href="tel:+9193506****">+91 9350**** </a>
                   <a href="tel:+91981******">+91 9810**** </a>

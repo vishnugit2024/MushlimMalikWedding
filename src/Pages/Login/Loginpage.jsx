@@ -1,16 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ReactModal from "react-modal";
+import { Helmet } from "react-helmet";
 import "./Loginpage.css";
 import { Link } from "react-router-dom";
 
 ReactModal.setAppElement("#root"); // Set the root element for accessibility
 
 const Loginpage = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
+
   const [showForgotPassword, setShowForgotPassword] = useState(false);
   const [showOTPForm, setShowOTPForm] = useState(false);
   const [passwordVisible, setPasswordVisible] = useState(false);
-  const [otp, setOtp] = React.useState(Array(6).fill(""));
-  const [error, setError] = React.useState("");
+  const [otp, setOtp] = useState(Array(6).fill(""));
+  const [error, setError] = useState("");
 
   const handleForgotPasswordSubmit = (e) => {
     e.preventDefault();
@@ -21,20 +29,15 @@ const Loginpage = () => {
 
   const handleOTPSubmit = (e) => {
     e.preventDefault();
-
-    // Join OTP inputs into a single string
     const otpValue = otp.join("");
-
-    // Validate OTP
     if (otpValue.length < 6) {
       setError("Please enter a valid 6-digit OTP.");
       return;
     }
     setError("");
     alert("OTP Verified!");
-
-    // Clear error and proceed with OTP verification
   };
+
   const togglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);
   };
@@ -43,13 +46,9 @@ const Loginpage = () => {
     const updatedOtp = [...otp];
     updatedOtp[index] = value;
     setOtp(updatedOtp);
-
-    // Auto-focus to the next input field
     if (value && index < 5) {
       document.getElementById(`otp-input-${index + 1}`).focus();
     }
-
-    // Focus back to the previous field on backspace
     if (!value && index > 0) {
       document.getElementById(`otp-input-${index - 1}`).focus();
     }
@@ -57,6 +56,13 @@ const Loginpage = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Login - Muslim Malik Risthe</title>
+        <meta
+          name="description"
+          content="Log in to Muslim Malik Risthe to find your perfect match. Enter your credentials or reset your password for easy access."
+        />
+      </Helmet>
       <div className="container-fluid login-bg">
         <div className="wrapper">
           <form action="#" className="Login-form">
@@ -101,7 +107,6 @@ const Loginpage = () => {
         </div>
       </div>
 
-      {/* Forgot Password Modal */}
       <ReactModal
         isOpen={showForgotPassword}
         onRequestClose={() => setShowForgotPassword(false)}
@@ -130,7 +135,6 @@ const Loginpage = () => {
         </div>
       </ReactModal>
 
-      {/* OTP Modal */}
       <ReactModal
         isOpen={showOTPForm}
         onRequestClose={() => setShowOTPForm(false)}
@@ -159,7 +163,6 @@ const Loginpage = () => {
                 />
               ))}
             </div>
-            {/* Display Error Message */}
             {error && <p className="error-message">{error}</p>}
             <button type="submit" className="submit-button">
               Verify OTP

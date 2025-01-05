@@ -1,12 +1,22 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import ReactModal from "react-modal";
 import "./userprofile.css";
 import { Link } from "react-router-dom";
 import AvatarEditor from "react-avatar-editor";
+import { Helmet } from "react-helmet";
 
-ReactModal.setAppElement("#root"); // To prevent screen readers from reading background content
+
+ReactModal.setAppElement("#root"); 
 
 const UserProfile = () => {
+
+  useEffect(() => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }, []);
+
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({
     name: "Asif",
@@ -67,6 +77,15 @@ const UserProfile = () => {
 
   return (
     <>
+
+<Helmet>
+        <title>User Profile - {formData.name}</title>
+        <meta name="description" content="User profile page with editable details and profile image." />
+        <meta name="keywords" content="User Profile, React, Editable Profile, Avatar Editor" />
+        <meta name="author" content="Your Name or Organization" />
+      </Helmet>
+
+
       <section>
         <div className="container">
           <div className="main-body">

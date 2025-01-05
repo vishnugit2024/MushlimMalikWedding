@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Gallery.css";
+import { Helmet } from "react-helmet";
 import Gallery1 from "../../Assets/Gallery5.jpg";
 import Gallery2 from "../../Assets/Galleryslider2.jpg";
 import Gallery3 from "../../Assets/Gallery6.jpg";
@@ -17,6 +18,13 @@ import Gallery14 from "../../Assets/muslimbanner.webp";
 import { Link } from "react-router-dom";
 
 const Gallery = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
+
   const galleryImages = [
     {
       src: Gallery1,
@@ -78,6 +86,19 @@ const Gallery = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Gallery - Happy Moments</title>
+        <meta
+          name="description"
+          content="Explore our gallery showcasing happy moments and achievements with our valued clients."
+        />
+        <meta
+          name="keywords"
+          content="gallery, happy moments, clients, images"
+        />
+        <meta name="author" content="Muslim Malik Risthe" />
+      </Helmet>
+
       <section>
         <div className="page-header">
           <h2>A Glimpse of Our Happy Momentsn</h2>
@@ -96,7 +117,6 @@ const Gallery = () => {
             </div>
           </div>
           <div className="row g-3">
-          
             {galleryImages.map((image, index) => (
               <div className="col-lg-3 col-md-4 col-sm-6" key={index}>
                 <div className="gallery-item">
