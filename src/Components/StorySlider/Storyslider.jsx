@@ -1,15 +1,15 @@
 import React from "react";
 import "./Slider.css";
 import Slider from "react-slick";
-import slider1 from "../../Assets/sliderimg.png";
-import Couple from "../../Assets/FoundLove.jpg"
-import Couple1 from "../../Assets/FoundLove1.jpg"
-import Couple2 from "../../Assets/FoundLove2.jpg"
-import Couple3 from "../../Assets/FoundLove3.jpg"
-import Couple4 from "../../Assets/FoundLove4.jpg"
-import Couple5 from "../../Assets/FoundLove5.jpg"
-import { Link } from "react-router-dom";
 
+import Couple from "../../Assets/FoundLove.jpg";
+import Couple1 from "../../Assets/FoundLove1.jpg";
+import Couple2 from "../../Assets/FoundLove2.jpg";
+import Couple3 from "../../Assets/FoundLove3.jpg";
+import Couple4 from "../../Assets/FoundLove4.jpg";
+import Couple5 from "../../Assets/FoundLove5.jpg";
+import stories1 from "../../Assets/SuccesStory.webp";
+import { Link } from "react-router-dom";
 
 const Storyslider = () => {
   const settings = {
@@ -39,7 +39,7 @@ const Storyslider = () => {
   };
 
   const images = [
-    { src: slider1, alt: "Image 1", text: "Aayan & Aleena" },
+    { src: stories1, alt: "Image 1", text: "Aayan & Aleena" },
     { src: Couple, alt: "Image 2", text: "Faizan & Fatima" },
     { src: Couple1, alt: "Image 3", text: "Asif & Aisha" },
     { src: Couple2, alt: "Image 4", text: "Rizwan & Noora" },

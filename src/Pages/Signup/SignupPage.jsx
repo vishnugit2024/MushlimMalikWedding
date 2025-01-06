@@ -1,4 +1,4 @@
-import React, { useState , useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./SignupPage.css";
 import BasicInfo from "./Basicinfo";
 import ContactInfo from "./ContactInfo";
@@ -6,14 +6,12 @@ import Preferences from "./Preferences";
 import Review from "./Review";
 
 const SignupPage = () => {
-
   useEffect(() => {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-      }, []);
-
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
 
   const [currentTab, setCurrentTab] = useState(1);
   const [formData, setFormData] = useState({
@@ -23,11 +21,13 @@ const SignupPage = () => {
     fatherName: "",
     motherName: "",
     dob: "",
+    maritalstatus: "",
     height: "",
     religion: "",
     pehchan: "",
     gotra: "",
     siblings: "",
+    Sistersiblings: "",
     marriedStatus: "",
     education: "",
     working: "",
@@ -36,15 +36,14 @@ const SignupPage = () => {
     profilePhoto: "",
     phone: "", // For Phone Number
     email: "", // For Email Address
-    city: "",  // For City
+    city: "", // For City
     state: "", // For State
     country: "", // For Country
-    pin: "",  
-    partnerGender: "",   // Stores the preferred partner's gender
-    weddingBudget: "",   // Stores the budget for the wedding
-    weddingStyle: "", 
+    pin: "",
+    partnerGender: "", // Stores the preferred partner's gender
+    weddingBudget: "", // Stores the budget for the wedding
+    weddingStyle: "",
   });
-  
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -60,7 +59,7 @@ const SignupPage = () => {
       <div className="container-fluid sign-up-form">
         <div className="Main-Form_container" id="signup-page">
           <div className="form-header">
-            <h1 className="sign-form-heading">Mushlim Mushlim Mushlim Mushlim Muslim Malik Risthes Signup</h1>
+            <h1 className="sign-form-heading">Create New Account</h1>
           </div>
 
           <div className="multitab-form-area">

@@ -4,18 +4,17 @@ import "./userprofile.css";
 import { Link } from "react-router-dom";
 import AvatarEditor from "react-avatar-editor";
 import { Helmet } from "react-helmet";
+import connectuser from "../../Assets/Testimonial5.png";
 
-
-ReactModal.setAppElement("#root"); 
+ReactModal.setAppElement("#root");
 
 const UserProfile = () => {
-
   useEffect(() => {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-      }, []);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
 
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({
@@ -28,7 +27,9 @@ const UserProfile = () => {
     gender: "DynamicData",
     age: "Dynamicage",
     height: "DynamicData",
+    MarriedStatus: "DynamicData",
     belong: "DynamicData",
+    sibling: "DynamicData",
     education: "DynamicData",
     working: "DynamicData",
     income: "DynamicData",
@@ -39,6 +40,8 @@ const UserProfile = () => {
     style: "DynamicData",
     familyHead: "DynamicData",
   });
+
+  // ====================================
 
   const [showAvatarEditor, setShowAvatarEditor] = useState(false);
   const [profileImage, setProfileImage] = useState(null);
@@ -75,16 +78,47 @@ const UserProfile = () => {
     }
   };
 
+  // ==================================
+  //  User Connection Request
+
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  // Sample user data
+  const user =  {
+    img: connectuser,
+    name: "Shruti",
+    age: "22",
+    working: "Software Engineer",
+    location: "Delhi",
+  };
+
+  const openModal = () => setModalIsOpen(true);
+  const closeModal = () => setModalIsOpen(false);
+
+  const acceptRequest = () => {
+    alert("Connection Request Accepted!");
+    closeModal();
+  };
+
+  const rejectRequest = () => {
+    alert("Connection Request Rejected!");
+    closeModal();
+  };
+
   return (
     <>
-
-<Helmet>
+      <Helmet>
         <title>User Profile - {formData.name}</title>
-        <meta name="description" content="User profile page with editable details and profile image." />
-        <meta name="keywords" content="User Profile, React, Editable Profile, Avatar Editor" />
+        <meta
+          name="description"
+          content="User profile page with editable details and profile image."
+        />
+        <meta
+          name="keywords"
+          content="User Profile, React, Editable Profile, Avatar Editor"
+        />
         <meta name="author" content="Your Name or Organization" />
       </Helmet>
-
 
       <section>
         <div className="container">
@@ -130,6 +164,13 @@ const UserProfile = () => {
                           onClick={() => setShowModal(true)}
                         >
                           Edit Profile
+                        </button>
+
+                        <button
+                          className="btn userprofile-creataccount mt-2"
+                          onClick={openModal}
+                        >
+                          Connection Request
                         </button>
                       </div>
                     </div>
@@ -294,6 +335,52 @@ const UserProfile = () => {
               </button>
             </div>
           </form>
+        </ReactModal>
+
+        {/* =========== User Connect Modal =========== */}
+
+        <ReactModal
+          isOpen={modalIsOpen}
+          onRequestClose={closeModal}
+          className="modal-style"
+          overlayClassName="modal-overlay modal-overlay1 "
+          contentLabel="User Details Modal"
+        >
+          <button onClick={closeModal} className="modal-close-btn">
+            &times;
+          </button>
+          <div className="container connection-main">
+            <div className="row align-items-center">
+            
+              <div className="col-md-2">
+                <img src={user.img} alt={user.name} className="user-image" />
+              </div>
+              <div className="col-md-4 text-start">
+                <p className="user-name">{user.name}</p>
+                <p>
+                  Age: <span className="text-secondary">{user.age}</span>
+                </p>
+              </div>
+              <div className="col-md-6 text-start">
+                <p>
+                  City: <span className="text-secondary">{user.location}</span>
+                </p>
+                <p>
+                  Work: <span className="text-secondary">{user.working}</span>
+                </p>
+              </div>
+            </div>
+            </div>
+          
+
+          <div className="request-actions">
+            <button onClick={acceptRequest} className="accept-btn">
+              Accept
+            </button>
+            <button onClick={rejectRequest} className="reject-btn">
+              Reject
+            </button>
+          </div>
         </ReactModal>
       </section>
     </>

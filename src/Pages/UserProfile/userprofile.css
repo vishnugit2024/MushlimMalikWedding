@@ -134,6 +134,152 @@
   color: white;
 }
 
+.user-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+}
+
+/* Modal Styles */
+.modal-style {
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  width: 450px;
+  max-height: 80vh; /* Ensures the modal doesn't exceed 80% of the viewport height */
+  overflow-y: auto; /* Enables vertical scrolling if content exceeds the height */
+  text-align: center;
+  background: #fff;
+  /* transform: translate(-50%, -50%); */
+}
+
+
+/* Close Button */
+.modal-close-btn {
+  position: absolute;
+  top: 0px;
+  right: 30px;
+  border: none;
+  background: transparent;
+  font-size: 50px;
+  color: white;
+  cursor: pointer;
+}
+
+/* User Image */
+.user-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  
+}
+
+.connection-main p {
+  padding: 0;
+  margin: 0;
+}
+
+/* User Name */
+.user-name {
+  font-weight: 600;
+  font-size: 1.2rem;
+ 
+}
+
+/* Request Actions */
+.request-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.request-actions .accept-btn,
+.request-actions .reject-btn {
+  outline: none;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+/* Accept Button */
+.accept-btn {
+  background-color: var(--font-color);
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.accept-btn:hover {
+  background-color: var(--font-color);
+}
+
+/* Reject Button */
+.reject-btn {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  transition: all 0.3s ease-in-out;
+}
+
+.reject-btn:hover {
+  background-color: var(--bg-color);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 576px) {
+  
+  .modal-close-btn {
+    position: absolute;
+    top: 0px;
+    right: 35px;
+    border: none;
+    background: transparent;
+    font-size: 35px;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .modal-style {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .user-image {
+    width: 50px;
+    height: 50px;
+  }
+
+  .user-name {
+    font-size: 1rem;
+  }
+
+  .request-actions {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .request-actions .accept-btn,
+  .request-actions .reject-btn {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  .modal-overlay1 {
+    position: absolute;
+    align-items: start;
+    top: auto !important;
+    bottom: 0 !important;
+  }
+}
+
 @media (max-width: 768px) {
   .modal-overlay {
     position: absolute;
@@ -141,4 +287,5 @@
     bottom: -818px;
     top: auto;
   }
+
 }

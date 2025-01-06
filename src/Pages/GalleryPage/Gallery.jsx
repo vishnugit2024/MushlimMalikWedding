@@ -96,7 +96,7 @@ const Gallery = () => {
           name="keywords"
           content="gallery, happy moments, clients, images"
         />
-        <meta name="author" content="Muslim Malik Risthe" />
+        <meta name="author" content="Muslim Malik Riste" />
       </Helmet>
 
       <section>

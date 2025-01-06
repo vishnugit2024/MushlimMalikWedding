@@ -31,23 +31,23 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>Find Your Soulmate - Muslim Malik Risthe</title>
+        <title>Find Your Soulmate - Muslim Malik Riste</title>
         <meta
           name="description"
-          content="Discover meaningful connections and celebrate love with Muslim Malik Risthe. Find your perfect match today with millions of success stories."
+          content="Discover meaningful connections and celebrate love with Muslim Malik Riste. Find your perfect match today with millions of success stories."
         />
         <meta
           name="keywords"
-          content="Muslim matchmaking, soulmate, Muslim matrimonial, Malik Risthe, perfect match, marriage platform"
+          content="Muslim matchmaking, soulmate, Muslim matrimonial, Malik Riste, perfect match, marriage platform"
         />
-        <meta name="author" content="Muslim Malik Risthe" />
+        <meta name="author" content="Muslim Malik Riste" />
         <meta
           property="og:title"
-          content="Find Your Soulmate - Muslim Malik Risthe"
+          content="Find Your Soulmate - Muslim Malik Riste"
         />
         <meta
           property="og:description"
-          content="Discover meaningful connections and celebrate love with Muslim Malik Risthe. Find your perfect match today with millions of success stories."
+          content="Discover meaningful connections and celebrate love with Muslim Malik Riste. Find your perfect match today with millions of success stories."
         />
         <meta property="og:image" content={heroimage} />
         <meta property="og:url" content="https://your-website-url.com/" />
@@ -58,11 +58,11 @@ const Home = () => {
         />
         <meta
           name="twitter:title"
-          content="Find Your Soulmate - Muslim Malik Risthe"
+          content="Find Your Soulmate - Muslim Malik Riste"
         />
         <meta
           name="twitter:description"
-          content="Discover meaningful connections and celebrate love with Muslim Malik Risthe. Find your perfect match today with millions of success stories."
+          content="Discover meaningful connections and celebrate love with Muslim Malik Riste. Find your perfect match today with millions of success stories."
         />
         <meta name="twitter:image" content={heroimage} />
       </Helmet>
@@ -71,13 +71,13 @@ const Home = () => {
         <div className="hero-img">
           <img
             src={heroimage}
-            alt="Muslim Malik Risthe Banner"
+            alt="Muslim Malik Riste Banner"
             className="img-fluid"
           />
         </div>
         <div className="hero-text">
           <h1 className="hero-heading">
-            Find Your Soulmate on Muslim Malik Risthe
+            Find Your Soulmate on Muslim Malik Riste
           </h1>
           <div className="hero-para-text">
             <h5 className="hero-paragraph">

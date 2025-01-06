@@ -91,7 +91,7 @@ const MalikFooter = () => {
 
         {/* Footer Bottom */}
         <div className="malik__footer-copyright">
-          <p>Copyright &copy; Muslim Malik Risthe, All rights reserved</p>
+          <p>Copyright &copy; Muslim Malik Riste, All rights reserved</p>
         </div>
       </Container>
     </section>

@@ -62,10 +62,10 @@ const ContactUs = () => {
     <>
       {/* Helmet for SEO */}
       <Helmet>
-        <title>Contact Us - Mushlim Mushlim Mushlim Mushlim Muslim Malik Risthe</title>
+        <title>Contact Us - Mushlim Mushlim Mushlim Mushlim Muslim Malik Riste</title>
         <meta
           name="description"
-          content="Get in touch with us for any inquiries or assistance. Let Mushlim Mushlim Mushlim Mushlim Mushlim Muslim Malik Risthe help you find the right partner."
+          content="Get in touch with us for any inquiries or assistance. Let Mushlim Mushlim Mushlim Mushlim Mushlim Muslim Malik Riste help you find the right partner."
         />
       </Helmet>
 

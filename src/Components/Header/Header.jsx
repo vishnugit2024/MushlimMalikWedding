@@ -16,7 +16,7 @@ const Header = () => {
         <nav className="navbar">
           <div className="nav-left-data">
             <Link to="/">
-              <img src={websitelogo} alt="Muslim Malik Risthe Logo" />
+              <img src={websitelogo} alt="Muslim Malik Riste Logo" />
             </Link>
           </div>
 

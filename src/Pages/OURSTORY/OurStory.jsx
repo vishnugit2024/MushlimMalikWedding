@@ -25,7 +25,7 @@ const OurStory = () => {
   return (
     <>
       <Helmet>
-        <title>Our Story | Mushlim Mushlim Mushlim Mushlim Muslim Malik Risthe</title>
+        <title>Our Story | Mushlim Mushlim Mushlim Mushlim Muslim Malik Riste</title>
         <meta name="description" content="Discover Asif and Aisha's beautiful love story, from their first meeting to their magical wedding day." />
       </Helmet>
 
@@ -63,7 +63,7 @@ const OurStory = () => {
                 </h4>
                 <p>
                   Asif and Aisha's story began on a sunny sunset when their
-                  profiles matched on a popular Muslim Malik Risthe website.
+                  profiles matched on a popular Muslim Malik Riste website.
                   Intrigued by Aisha's love for poetry and Asif's passion for
                   photography, they exchanged messages that turned into long,
                   meaningful conversations. After weeks of chatting and phone

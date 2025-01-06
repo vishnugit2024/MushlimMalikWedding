@@ -4,13 +4,14 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import profilebg from "../../Assets/ProfileBg.jpeg";
 import profileimg from "../../Assets/Storypage.png";
-import profileimg1 from "../../Assets/sliderimg.png";
 import profileimg2 from "../../Assets/Testimonail.png";
 import profileimg3 from "../../Assets/Testimonial1.jpg";
 import profileimg4 from "../../Assets/Testimonial2.png";
 import profileimg5 from "../../Assets/Testimonial3.png";
 import profileimg6 from "../../Assets/Testimonial4.png";
 import profileimg7 from "../../Assets/Testimonial5.png";
+import stories1 from "../../Assets/SuccesStory.webp";
+
 
 const ProfilePage = () => {
 
@@ -30,9 +31,10 @@ const ProfilePage = () => {
       Place: "Delhi",
       height: "5.4Ich",
       education: "B.A",
+      
     },
     {
-      img: profileimg1,
+      img: stories1,
       profileID: 102,
       name: "Kirti",
       age: "22",

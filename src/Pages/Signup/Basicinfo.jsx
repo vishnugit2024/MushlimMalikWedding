@@ -8,8 +8,6 @@ const Basicinfo = ({ formData, handleChange, goToTab }) => {
     setPasswordVisible(!passwordVisible);
   };
 
-  
-
   return (
     <>
       <div>
@@ -100,18 +98,16 @@ const Basicinfo = ({ formData, handleChange, goToTab }) => {
                 />
               </div>
             </div>
-
             <div className="col-md-4">
-              <div className="form-field gender-style">
-                <label htmlFor="dob" className="label-main">
-                  Date of Birth <sup>*</sup>
+              <div className="form-field">
+                <label htmlFor="religion" className="label-main">
+                  Grand Father Name <sup>*</sup>
                 </label>
                 <input
-                  type="date"
-                  id="dob"
-                  name="dob"
-                  className="select-style"
-                  value={formData.dob}
+                  type="text"
+                  id="religion"
+                  name="religion"
+                  value={formData.religion}
                   onChange={handleChange}
                   required
                 />
@@ -135,62 +131,65 @@ const Basicinfo = ({ formData, handleChange, goToTab }) => {
               </div>
             </div>
             <div className="col-md-4">
-              <div className="form-field">
-                <label htmlFor="religion" className="label-main">
-                  Grand Father Name <sup>*</sup>
+              <div className="form-field gender-style">
+                <label htmlFor="dob" className="label-main">
+                  Date of Birth <sup>*</sup>
                 </label>
                 <input
-                  type="text"
-                  id="religion"
-                  name="religion"
-                  value={formData.religion}
+                  type="date"
+                  id="dob"
+                  name="dob"
+                  className="select-style"
+                  value={formData.dob}
                   onChange={handleChange}
                   required
                 />
               </div>
             </div>
             <div className="col-md-4">
-              <div className="form-field">
-                <label htmlFor="pehchan" className="label-main">
-                  Belong (Pehchan)<sup>*</sup>
+              <div className="form-field gender-style">
+                <label htmlFor="maritalstatus" className="label-main">
+                  Married Status <sup>*</sup>
                 </label>
-                <input
-                  type="text"
-                  id="pehchan"
-                  name="pehchan"
-                  value={formData.pehchan}
+                <select
+                  id="maritalstatus"
+                  name="maritalstatus"
+                  className="select-style"
+                  value={formData.maritalstatus}
                   onChange={handleChange}
                   required
-                />
+                >
+                  <option value="" disabled>
+                    Marital Status
+                  </option>
+                  <option value="UnMarried">UnMarried</option>
+                  <option value="Married">Married</option>
+                  <option value="Divorced">Divorced</option>
+                  <option value="Windowed">Widow</option>
+                </select>
               </div>
             </div>
           </div>
           <div className="row">
             <div className="col-md-4">
-              <div className="form-field gender-style">
+              <div className="form-field">
                 <label htmlFor="gotra" className="label-main">
-                  Family Occupation Head <sup>*</sup>
+                  Family Occupation Head<sup>*</sup>
                 </label>
-                <select
+                <input
+                  type="text"
                   id="gotra"
                   name="gotra"
-                  className="select-style"
                   value={formData.gotra}
                   onChange={handleChange}
                   required
-                >
-                  <option value="" disabled>
-                    Select Head
-                  </option>
-                  <option value="Father">Father</option>
-                  <option value="Brother">Brother</option>
-                </select>
+                />
               </div>
             </div>
             <div className="col-md-4">
               <div className="form-field">
                 <label htmlFor="siblings" className="label-main">
-                  Number of Siblings<sup>*</sup>
+                  Number of Brothers<sup>*</sup>
                 </label>
                 <input
                   type="number"
@@ -202,6 +201,23 @@ const Basicinfo = ({ formData, handleChange, goToTab }) => {
                 />
               </div>
             </div>
+            <div className="col-md-4">
+              <div className="form-field">
+                <label htmlFor="Sistersiblings" className="label-main">
+                  Number of Sisters<sup>*</sup>
+                </label>
+                <input
+                  type="number"
+                  id="Sistersiblings"
+                  name="Sistersiblings"
+                  value={formData.Sistersiblings}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+            </div>
+          </div>
+          <div className="row">
             <div className="col-md-4">
               <div className="form-field gender-style">
                 <label htmlFor="marriedStatus" className="label-main">
@@ -225,8 +241,21 @@ const Basicinfo = ({ formData, handleChange, goToTab }) => {
                 </select>
               </div>
             </div>
-          </div>
-          <div className="row">
+            <div className="col-md-4">
+              <div className="form-field">
+                <label htmlFor="pehchan" className="label-main">
+                  Belong (Pehchan)<sup>*</sup>
+                </label>
+                <input
+                  type="text"
+                  id="pehchan"
+                  name="pehchan"
+                  value={formData.pehchan}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+            </div>
             <div className="col-md-4">
               <div className="form-field">
                 <label htmlFor="education" className="label-main">
@@ -242,6 +271,8 @@ const Basicinfo = ({ formData, handleChange, goToTab }) => {
                 />
               </div>
             </div>
+          </div>
+          <div className="row">
             <div className="col-md-4">
               <div className="form-field">
                 <label htmlFor="working" className="label-main">
@@ -260,7 +291,7 @@ const Basicinfo = ({ formData, handleChange, goToTab }) => {
             <div className="col-md-4">
               <div className="form-field">
                 <label htmlFor="annualIncome" className="label-main">
-                  Annual Income<sup>*</sup>
+                  Annual Income
                 </label>
                 <input
                   type="number"
@@ -268,12 +299,9 @@ const Basicinfo = ({ formData, handleChange, goToTab }) => {
                   name="annualIncome"
                   value={formData.annualIncome}
                   onChange={handleChange}
-                  required
                 />
               </div>
             </div>
-          </div>
-          <div className="row">
             <div className="col-md-4">
               <div className="form-field">
                 <label htmlFor="Password" className="label-main">
@@ -297,10 +325,12 @@ const Basicinfo = ({ formData, handleChange, goToTab }) => {
                 </button>
               </div>
             </div>
+          </div>
+          <div className="row">
             <div className="col-md-4">
               <div className="form-field">
                 <label htmlFor="ProfilePhoto" className="label-main">
-                  Upload Profile Image<sup>*</sup>
+                  Upload Profile Image
                 </label>
                 <input type="file" accept="image/*" required />
               </div>

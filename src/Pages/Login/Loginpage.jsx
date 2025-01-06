@@ -57,10 +57,10 @@ const Loginpage = () => {
   return (
     <>
       <Helmet>
-        <title>Login - Muslim Malik Risthe</title>
+        <title>Login - Muslim Malik Riste</title>
         <meta
           name="description"
-          content="Log in to Muslim Malik Risthe to find your perfect match. Enter your credentials or reset your password for easy access."
+          content="Log in to Muslim Malik Riste to find your perfect match. Enter your credentials or reset your password for easy access."
         />
       </Helmet>
       <div className="container-fluid login-bg">

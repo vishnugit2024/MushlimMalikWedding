@@ -51,7 +51,7 @@ const Member = () => {
   return (
     <>
       <Helmet>
-        <title>Membership Plans | Mushlim Muslim Malik Risthe</title>
+        <title>Membership Plans | Mushlim Muslim Malik Riste</title>
         <meta
           name="description"
           content="Explore our membership plans and start your matchmaking journey today!"

@@ -33,7 +33,7 @@ const Preferences = ({ formData, handleChange, goToTab }) => {
             <div className="col-md-4">
               <div className="form-field">
                 <label htmlFor="weddingBudget" className="label-main">
-                  Wedding Budget <sup>*</sup>
+                  Wedding Budget
                 </label>
                 <input
                   type="text"
@@ -41,7 +41,7 @@ const Preferences = ({ formData, handleChange, goToTab }) => {
                   name="weddingBudget"
                   value={formData.weddingBudget}
                   onChange={handleChange}
-                  required
+                  
                 />
               </div>
             </div>

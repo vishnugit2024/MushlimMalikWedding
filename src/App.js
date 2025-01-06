@@ -11,6 +11,7 @@ import MalikFooter from "./Components/Footer/MalikFooter";
 import Gallery from "./Pages/GalleryPage/Gallery";
 import ProfilePage from "./Pages/PROFILES/ProfilePage";
 import UserProfile from "./Pages/UserProfile/UserProfile";
+import InnerProfile from "./Pages/DynamicInnerProfile/InnerProfile";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/profilePage" element={<ProfilePage />} />
         <Route path="/userProfile" element={<UserProfile />} />
+        <Route path="/InnerProfile" element={<InnerProfile />} />
       </Routes>
       <MalikFooter/>
     </Router>
