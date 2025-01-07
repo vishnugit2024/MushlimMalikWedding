@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
 import websitelogo from "../../Assets/Websitelogo.png";
+import whatsapp from "../../Assets/whatsapp.png";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -12,6 +13,21 @@ const Header = () => {
 
   return (
     <>
+      {/* =================Float whatsapp icon ================= */}
+
+      <div>
+        <Link
+          to="https://api.whatsapp.com/send?phone=9599467465"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button className="btn-floating whatsapp">
+            <img src={whatsapp} alt="WhatsApp" />
+            <span>9599467465</span>
+          </button>
+        </Link>
+      </div>
+
       <div className="container-fluid nav-bg">
         <nav className="navbar">
           <div className="nav-left-data">

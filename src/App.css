@@ -129,6 +129,50 @@ input[type="number"] {
   color: var(--bg-color);
 }
 
+.btn-floating {
+  position: fixed;
+  right: 25px;
+  overflow: hidden;
+  width: 60px;
+  height: 60px;
+  border-radius: 100px;
+  border: 0;
+  z-index: 9999;
+  color: white;
+  transition: 0.2s;
+}
+
+.btn-floating:hover {
+  width: auto;
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+.btn-floating span {
+  font-size: 16px;
+  margin-left: 5px;
+  transition: 0.2s;
+  line-height: 0px;
+  display: none;
+}
+
+.btn-floating:hover span {
+  display: inline-block;
+}
+
+.btn-floating img {
+  height: 40%;
+}
+
+/* WhatsApp */
+.btn-floating.whatsapp {
+  background-color: #34af23;
+  bottom: 60px;
+}
+
+.btn-floating.whatsapp:hover {
+  background-color: #1f7a12;
+}
 
 @media (max-width: 768px) {
   .page-header {

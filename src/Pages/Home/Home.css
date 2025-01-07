@@ -202,6 +202,11 @@
   .seprater {
     height: 100px;
   }
+
+  .match-data1 {
+    flex-direction: column-reverse;
+   
+  }
 }
 
 @media (max-width: 576px) {

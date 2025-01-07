@@ -88,7 +88,7 @@ const UserProfile = () => {
     img: connectuser,
     name: "Shruti",
     age: "22",
-    working: "Software Engineer",
+    working: "Software Eng.",
     location: "Delhi",
   };
 
