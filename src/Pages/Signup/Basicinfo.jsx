@@ -11,19 +11,19 @@ const Basicinfo = ({ formData, handleChange, goToTab }) => {
   return (
     <>
       <div>
-        <h4>Basic Information</h4>
+        <h4>Basic Details</h4>
         <form className="main-form">
           <div className="row">
             <div className="col-md-4">
               <div className="form-field">
-                <label htmlFor="name" className="label-main">
+                <label htmlFor="fullName" className="label-main">
                   Full Name <sup>*</sup>
                 </label>
                 <input
                   type="text"
                   id="fullName"
-                  name="name"
-                  value={formData.name}
+                  name="fullName"
+                  value={formData.fullName}
                   onChange={handleChange}
                   required
                 />
@@ -61,8 +61,8 @@ const Basicinfo = ({ formData, handleChange, goToTab }) => {
                   <option value="" disabled>
                     Select Gender
                   </option>
-                  <option value="male">Male</option>
-                  <option value="female">Female</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
                 </select>
               </div>
             </div>
@@ -100,14 +100,14 @@ const Basicinfo = ({ formData, handleChange, goToTab }) => {
             </div>
             <div className="col-md-4">
               <div className="form-field">
-                <label htmlFor="religion" className="label-main">
+                <label htmlFor="GrandFatherName" className="label-main">
                   Grand Father Name <sup>*</sup>
                 </label>
                 <input
                   type="text"
-                  id="religion"
-                  name="religion"
-                  value={formData.religion}
+                  id="GrandFatherName"
+                  name="GrandFatherName"
+                  value={formData.GrandFatherName}
                   onChange={handleChange}
                   required
                 />
@@ -162,8 +162,7 @@ const Basicinfo = ({ formData, handleChange, goToTab }) => {
                   <option value="" disabled>
                     Marital Status
                   </option>
-                  <option value="UnMarried">UnMarried</option>
-                  <option value="Married">Married</option>
+                  <option value="UnMarried">Never Married</option>
                   <option value="Divorced">Divorced</option>
                   <option value="Windowed">Widow</option>
                 </select>
@@ -172,20 +171,48 @@ const Basicinfo = ({ formData, handleChange, goToTab }) => {
           </div>
           <div className="row">
             <div className="col-md-4">
+              <div className="form-field gender-style">
+                <label htmlFor="FamilyHead" className="label-main">
+                  Family Head <sup>*</sup>
+                </label>
+                <select
+                  id="FamilyHead"
+                  name="FamilyHead"
+                  className="select-style"
+                  value={formData.FamilyHead}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="" disabled>
+                    Select Head
+                  </option>
+                  <option value="Father">Father</option>
+                  <option value="Mother">Mother</option>
+                  <option value="Brother">Brother</option>
+                  <option value="Sister">Sister</option>
+                  <option value="GrandFather">GrandFather</option>
+                  <option value="GrandMother">GrandMother</option>
+                  <option value="Uncle">Uncle</option>
+                </select>
+              </div>
+            </div>
+
+            <div className="col-md-4">
               <div className="form-field">
-                <label htmlFor="gotra" className="label-main">
-                  Family Occupation Head<sup>*</sup>
+                <label htmlFor="FamilyHeadOccupation" className="label-main">
+                  Family Head Occupation<sup>*</sup>
                 </label>
                 <input
                   type="text"
-                  id="gotra"
-                  name="gotra"
-                  value={formData.gotra}
+                  id="FamilyHeadOccupation"
+                  name="FamilyHeadOccupation"
+                  value={formData.FamilyHeadOccupation}
                   onChange={handleChange}
                   required
                 />
               </div>
             </div>
+
             <div className="col-md-4">
               <div className="form-field">
                 <label htmlFor="siblings" className="label-main">
@@ -201,6 +228,8 @@ const Basicinfo = ({ formData, handleChange, goToTab }) => {
                 />
               </div>
             </div>
+          </div>
+          <div className="row">
             <div className="col-md-4">
               <div className="form-field">
                 <label htmlFor="Sistersiblings" className="label-main">
@@ -214,31 +243,6 @@ const Basicinfo = ({ formData, handleChange, goToTab }) => {
                   onChange={handleChange}
                   required
                 />
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-md-4">
-              <div className="form-field gender-style">
-                <label htmlFor="marriedStatus" className="label-main">
-                  Sibling Married Status <sup>*</sup>
-                </label>
-                <select
-                  id="marriedStatus"
-                  name="marriedStatus"
-                  className="select-style"
-                  value={formData.marriedStatus}
-                  onChange={handleChange}
-                  required
-                >
-                  <option value="" disabled>
-                    Marital Status
-                  </option>
-                  <option value="UnMarried">UnMarried</option>
-                  <option value="Married">Married</option>
-                  <option value="Divorced">Divorced</option>
-                  <option value="Windowed">Widow</option>
-                </select>
               </div>
             </div>
             <div className="col-md-4">
@@ -256,6 +260,7 @@ const Basicinfo = ({ formData, handleChange, goToTab }) => {
                 />
               </div>
             </div>
+
             <div className="col-md-4">
               <div className="form-field">
                 <label htmlFor="education" className="label-main">
@@ -302,6 +307,32 @@ const Basicinfo = ({ formData, handleChange, goToTab }) => {
                 />
               </div>
             </div>
+
+            <div className="col-md-4">
+              <div className="form-field gender-style">
+                <label htmlFor="house" className="label-main">
+                  House <sup>*</sup>
+                </label>
+                <select
+                  id="house"
+                  name="house"
+                  className="select-style"
+                  value={formData.house}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="" disabled>
+                    Select type
+                  </option>
+                  <option value="Owned">Owned</option>
+                  <option value="Rental">Rental</option>
+                </select>
+              </div>
+            </div>
+
+          </div>
+
+          <div className="row">
             <div className="col-md-4">
               <div className="form-field">
                 <label htmlFor="Password" className="label-main">
@@ -325,8 +356,7 @@ const Basicinfo = ({ formData, handleChange, goToTab }) => {
                 </button>
               </div>
             </div>
-          </div>
-          <div className="row">
+
             <div className="col-md-4">
               <div className="form-field">
                 <label htmlFor="ProfilePhoto" className="label-main">

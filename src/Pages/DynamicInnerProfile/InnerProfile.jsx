@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./innerProfile.css";
 import innerImage from "../../Assets/Testimonial3.png";
+import Modal from "react-modal";
+import { Link } from "react-router-dom";
+Modal.setAppElement("#root");
+
 const InnerProfile = () => {
-  const handleAlert = () => {
-    alert("Request send successfully");
-  };
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  }, []);
 
   return (
     <>
@@ -67,12 +76,6 @@ const InnerProfile = () => {
                   </h6>
                   <span className="text-secondary">*****</span>
                 </li>
-              </ul>
-            </div>
-          </div>
-          <div className="col-md-4">
-            <div className="center-data">
-              <ul className="list-group list-group-flush">
                 <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                   <h6 className="mb-0">
                     <i className="bi bi-arrow-bar-right"></i>
@@ -80,7 +83,12 @@ const InnerProfile = () => {
                   </h6>
                   <span className="text-secondary">5.2ich</span>
                 </li>
-
+              </ul>
+            </div>
+          </div>
+          <div className="col-md-4">
+            <div className="center-data">
+              <ul className="list-group list-group-flush">
                 <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                   <h6 className="mb-0">
                     <i className="bi bi-arrow-bar-right"></i>
@@ -94,6 +102,13 @@ const InnerProfile = () => {
                     Marital Status
                   </h6>
                   <span className="text-secondary">Single</span>
+                </li>
+                <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                  <h6 className="mb-0">
+                    <i className="bi bi-arrow-bar-right"></i>
+                    Family Head
+                  </h6>
+                  <span className="text-secondary">Father</span>
                 </li>
                 <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                   <h6 className="mb-0">
@@ -116,6 +131,13 @@ const InnerProfile = () => {
                   </h6>
                   <span className="text-secondary">3</span>
                 </li>
+                <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                  <h6 className="mb-0">
+                    <i className="bi bi-arrow-bar-right"></i>
+                    Education
+                  </h6>
+                  <span className="text-secondary">BA</span>
+                </li>
 
                 <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                   <h6 className="mb-0">
@@ -133,14 +155,6 @@ const InnerProfile = () => {
                 <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                   <h6 className="mb-0">
                     <i className="bi bi-arrow-bar-right"></i>
-                    Education
-                  </h6>
-                  <span className="text-secondary">BA</span>
-                </li>
-
-                <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
-                  <h6 className="mb-0">
-                    <i className="bi bi-arrow-bar-right"></i>
                     Working
                   </h6>
                   <span className="text-secondary">Accountant</span>
@@ -155,9 +169,23 @@ const InnerProfile = () => {
                 <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                   <h6 className="mb-0">
                     <i className="bi bi-arrow-bar-right"></i>
+                    House
+                  </h6>
+                  <span className="text-secondary">Owned</span>
+                </li>
+                <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                  <h6 className="mb-0">
+                    <i className="bi bi-arrow-bar-right"></i>
                     City
                   </h6>
                   <span className="text-secondary">Delhi</span>
+                </li>
+                <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                  <h6 className="mb-0">
+                    <i className="bi bi-arrow-bar-right"></i>
+                    Pin Code
+                  </h6>
+                  <span className="text-secondary">110054</span>
                 </li>
                 <li className="list-group-item d-flex justify-content-between align-items-center flex-wrap">
                   <h6 className="mb-0">
@@ -187,11 +215,61 @@ const InnerProfile = () => {
             Note: Send Connection Request to Persone for Access Contact Details.
           </h5>
           <div className="button-container my-3">
-            <button className="viewall-btn" onClick={handleAlert}>
+            <button className="viewall-btn" onClick={() => setModalOpen(true)}>
               Connect Now
             </button>
           </div>
         </div>
+        <Modal
+          isOpen={isModalOpen}
+          onRequestClose={() => setModalOpen(false)}
+          style={{
+            content: {
+              top: "50%",
+              left: "50%",
+              right: "auto",
+              bottom: "auto",
+              marginRight: "-50%",
+              transform: "translate(-50%, -50%)",
+              textAlign: "center",
+              borderRadius: "10px",
+              padding: "20px",
+            },
+            overlay: { backgroundColor: "rgba(0, 0, 0, 0.5)" },
+          }}
+        >
+          <h2>Connect Request</h2>
+          <p>
+            Before sending a connect request, check our plans.
+          </p>
+          <Link to="/member">
+          <button
+            style={{
+              marginRight: "10px",
+              padding: "8px 16px",
+              background: "#800020",
+              color: "#fff",
+              border: "none",
+              borderRadius: "5px",
+            }}
+            onClick={() => alert("Redirecting to Plan page...")}
+          >
+            Purchase Now
+          </button>
+          </Link>
+          <button
+            style={{
+              padding: "8px 16px",
+              background: "#dc3545",
+              color: "#fff",
+              border: "none",
+              borderRadius: "5px",
+            }}
+            onClick={() => setModalOpen(false)}
+          >
+            Close
+          </button>
+        </Modal>
       </div>
     </>
   );

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import "./SignupPage.css";
 import BasicInfo from "./Basicinfo";
 import ContactInfo from "./ContactInfo";
-import Preferences from "./Preferences";
 import Review from "./Review";
 
 const SignupPage = () => {
@@ -20,27 +19,29 @@ const SignupPage = () => {
     gender: "",
     fatherName: "",
     motherName: "",
+    GrandFatherName: "",
+    height: "",
     dob: "",
     maritalstatus: "",
-    height: "",
-    religion: "",
-    pehchan: "",
-    gotra: "",
+    FamilyHead: "",
+    FamilyHeadOccupation: "",
     siblings: "",
     Sistersiblings: "",
-    marriedStatus: "",
+    pehchan: "",
+
     education: "",
     working: "",
     annualIncome: "",
+    house: "",
     password: "",
     profilePhoto: "",
     phone: "", // For Phone Number
-    email: "", // For Email Address
+    email: "",
+    area: "",
     city: "", // For City
     state: "", // For State
-    country: "", // For Country
     pin: "",
-    partnerGender: "", // Stores the preferred partner's gender
+    country: "", // For Country
     weddingBudget: "", // Stores the budget for the wedding
     weddingStyle: "",
   });
@@ -59,7 +60,7 @@ const SignupPage = () => {
       <div className="container-fluid sign-up-form">
         <div className="Main-Form_container" id="signup-page">
           <div className="form-header">
-            <h1 className="sign-form-heading">Create New Account</h1>
+            <h1 className="sign-form-heading">Create Profile</h1>
           </div>
 
           <div className="multitab-form-area">
@@ -74,7 +75,7 @@ const SignupPage = () => {
                     }
                     onClick={() => goToTab(1)}
                   >
-                    Personal Info
+                    Personal Details
                   </a>
                 </li>
                 <li>
@@ -85,9 +86,10 @@ const SignupPage = () => {
                     }
                     onClick={() => goToTab(2)}
                   >
-                    Contact Info
+                    Other  Details
                   </a>
                 </li>
+
                 <li>
                   <a
                     href="#"
@@ -95,17 +97,6 @@ const SignupPage = () => {
                       currentTab === 3 ? "tab-link active" : "tab-link"
                     }
                     onClick={() => goToTab(3)}
-                  >
-                    Preferences
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className={
-                      currentTab === 4 ? "tab-link active" : "tab-link"
-                    }
-                    onClick={() => goToTab(4)}
                   >
                     Review
                   </a>
@@ -129,14 +120,8 @@ const SignupPage = () => {
                   goToTab={goToTab}
                 />
               )}
-              {currentTab === 3 && (
-                <Preferences
-                  formData={formData}
-                  handleChange={handleChange}
-                  goToTab={goToTab}
-                />
-              )}
-              {currentTab === 4 && <Review formData={formData} />}
+
+              {currentTab === 3 && <Review formData={formData} />}
             </div>
           </div>
         </div>

@@ -10,7 +10,7 @@
   width: 100%;
   height: 90vh; /* Full viewport height */
   object-fit: cover; /* Ensure the image covers the area */
-  filter: blur(2px);
+  filter: blur(1px);
   transition: filter 0.3s ease-in-out;
 }
 
@@ -35,7 +35,7 @@
   position: relative; /* Ensure positioning context for the pseudo-element */
   padding: 1.2rem;
   z-index: 10;
-  background-color: rgba(128, 0, 32, 0.409); /* Semi-transparent background */
+  background-color: rgba(152, 5, 42, 0.626); /* Semi-transparent background */
   border-radius: 1rem;
 }
 
@@ -87,11 +87,10 @@
   align-items: center;
   width: 7%; /* Ensure it spans the full parent */
   position: relative;
-  --c: #800020;
   aspect-ratio: 1;
-  background: radial-gradient(at 70% 31%, var(--c) 29%, #0000 30%),
-    radial-gradient(at 30% 31%, var(--c) 29%, #0000 30%),
-    linear-gradient(var(--c) 0 0) bottom/100% 50% no-repeat;
+  background: radial-gradient(at 70% 31%, var(--font-color) 29%, #0000 30%),
+    radial-gradient(at 30% 31%, var(--font-color) 29%, #0000 30%),
+    linear-gradient(var(--font-color) 0 0) bottom/100% 50% no-repeat;
   clip-path: polygon(-43% 0, 50% 91%, 143% 0);
   animation: heart-beat 1.5s infinite ease-in-out;
 }
@@ -125,7 +124,7 @@
 }
 
 .match-icon-data h5 {
-  color: #800020;
+  color: var(--font-color);
   font-weight: 700;
   padding: 0;
   margin: 0;
@@ -146,7 +145,7 @@
 
 .seprater {
   width: 5px;
-  background-color: #800020;
+  background-color: var(--font-color);
   height: 230px;
 }
 
@@ -157,7 +156,7 @@
 }
 
 .match-heading h2 span {
-  color: #800020; /* Optional: different color for the span text */
+  color: var(--font-color); /* Optional: different color for the span text */
 }
 
 /* Responsive Styles */

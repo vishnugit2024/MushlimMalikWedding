@@ -6,9 +6,9 @@ const WeddingPlane = () => {
   const plans = [
     {
       title: "Basic",
-      price: "₹501",
+      price: "Free",
       features: [
-        { text: "Can see contact details", included: true },
+        { text: "Profile Overview", included: true },
         { text: "Verified profiles access", included: false },
         { text: "Priority support", included: false },
         { text: "Unlimited connections", included: false },
@@ -20,21 +20,21 @@ const WeddingPlane = () => {
     },
     {
       title: "Premium",
-      price: "₹1001",
+      price: "₹499",
       features: [
         { text: "Can see contact details", included: true },
         { text: "Verified profiles access", included: true },
         { text: "Priority support", included: true },
-        { text: "Unlimited connections", included: true },
+        { text: "6 months validation", included: true },
+        { text: "Unlimited connections", included: false },
         { text: "Ad-free experience", included: false },
-        { text: "Dedicated account manager", included: false },
       ],
       Payment: "Buy Now",
       link: "/plans/premium", // Dynamic link for Premium plan
     },
     {
       title: "Elite",
-      price: "₹2001",
+      price: "₹999",
       features: [
         { text: "Can see contact details", included: true },
         { text: "Verified profiles access", included: true },

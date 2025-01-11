@@ -1,6 +1,6 @@
 /* General Navbar Styling */
 .nav-bg {
-  background-color: #800020; /* Light background */
+  background-color: var(--font-color); /* Light background */
   position: relative;
 }
 
@@ -74,8 +74,12 @@
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
+.login-name p {
+  font-size: 14px;
+}
+
 .login-icon {
-  font-size: 20px;
+  font-size: 23px;
   position: relative;
   overflow: hidden;
 }
@@ -88,9 +92,6 @@
   transform: translateY(-3px);
 }
 
-.login-name h5 {
-  font-size: 10px;
-}
 
 .hamburger-menu {
   display: none;

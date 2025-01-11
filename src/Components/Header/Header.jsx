@@ -32,7 +32,7 @@ const Header = () => {
         <nav className="navbar">
           <div className="nav-left-data">
             <Link to="/">
-              <img src={websitelogo} alt="Muslim Malik Riste Logo" />
+              <img src={websitelogo} alt="Muslim Malik Rishte Logo" />
             </Link>
           </div>
 
@@ -56,16 +56,6 @@ const Header = () => {
               </li>
 
               <li className="nav-links">
-                <Link to="/ourstory" onClick={() => setMenuOpen(false)}>
-                  OUR STORY
-                </Link>
-              </li>
-              <li className="nav-links">
-                <Link to="/gallery" onClick={() => setMenuOpen(false)}>
-                  GALLERY
-                </Link>
-              </li>
-              <li className="nav-links">
                 <Link to="/contactUs" onClick={() => setMenuOpen(false)}>
                   CONTACT US
                 </Link>
@@ -81,9 +71,9 @@ const Header = () => {
                 </Link>
               </div>
               <div className="login-name">
-                <h5>
+                <p>
                   <Link to="/userProfile">MY PROFILE</Link>
-                </h5>
+                </p>
               </div>
             </div>
             <div className="nav-login-btn">
@@ -93,9 +83,9 @@ const Header = () => {
                 </Link>
               </div>
               <div className="login-name">
-                <h5>
+                <p>
                   <Link to="/login">LOGIN</Link>
-                </h5>
+                </p>
               </div>
             </div>
 
@@ -106,9 +96,9 @@ const Header = () => {
                 </Link>
               </div>
               <div className="login-name">
-                <h5>
+                <p>
                   <Link to="/signup">SIGN UP</Link>
-                </h5>
+                </p>
               </div>
             </div>
           </div>

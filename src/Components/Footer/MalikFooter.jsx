@@ -6,13 +6,15 @@ import { Link } from "react-router-dom";
 
 const quickLinks = [
   { text: "Home", path: "/" },
-  { text: "Our Story", path: "/OurStory" },
+  { text: "Profile", path: "/ProfilePage" },
+
   { text: "Membership", path: "/Member" },
 ];
 const quickLinks1 = [
-  { text: "Profile", path: "/ProfilePage" },
-  { text: "Gallery", path: "/Gallery" },
-  { text: "Contact Us", path: "/ContactUs" },
+
+  { text: "Contact Us", path: "/contactUs" },
+  { text: "Term & Condition", path: "/termCondition" },
+  { text: "Privacy & Policy", path: "/privacyPolicy" },
 ];
 const socialIcons = [
   { icon: "bi-facebook", href: "#!" },
@@ -91,7 +93,7 @@ const MalikFooter = () => {
 
         {/* Footer Bottom */}
         <div className="malik__footer-copyright">
-          <p>Copyright &copy; Muslim Malik Riste, All rights reserved</p>
+          <p>Copyright &copy; Muslim Malik Rishte, All rights reserved</p>
         </div>
       </Container>
     </section>

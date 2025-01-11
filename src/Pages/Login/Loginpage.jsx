@@ -57,10 +57,10 @@ const Loginpage = () => {
   return (
     <>
       <Helmet>
-        <title>Login - Muslim Malik Riste</title>
+        <title>Login - Muslim Malik Rishte</title>
         <meta
           name="description"
-          content="Log in to Muslim Malik Riste to find your perfect match. Enter your credentials or reset your password for easy access."
+          content="Log in to Muslim Malik Rishte to find your perfect match. Enter your credentials or reset your password for easy access."
         />
       </Helmet>
       <div className="container-fluid login-bg">
@@ -100,7 +100,7 @@ const Loginpage = () => {
             </button>
             <div className="register">
               <p>
-                Don't have an account? <Link to="/signup">Register</Link>
+                Don't have an account? <Link to="/signup">Create Account</Link>
               </p>
             </div>
           </form>

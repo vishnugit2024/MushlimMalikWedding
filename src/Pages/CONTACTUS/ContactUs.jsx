@@ -62,10 +62,10 @@ const ContactUs = () => {
     <>
       {/* Helmet for SEO */}
       <Helmet>
-        <title>Contact Us - Mushlim Mushlim Mushlim Mushlim Muslim Malik Riste</title>
+        <title>Contact Us - Mushlim Mushlim Mushlim Mushlim Muslim Malik Rishte</title>
         <meta
           name="description"
-          content="Get in touch with us for any inquiries or assistance. Let Mushlim Mushlim Mushlim Mushlim Mushlim Muslim Malik Riste help you find the right partner."
+          content="Get in touch with us for any inquiries or assistance. Let Mushlim Mushlim Mushlim Mushlim Mushlim Muslim Malik Rishte help you find the right partner."
         />
       </Helmet>
 
@@ -135,7 +135,6 @@ const ContactUs = () => {
                       {...register("email", {
                         required: "Email is required",
                         pattern: {
-                          value: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
                           message: "Invalid email address",
                         },
                       })}

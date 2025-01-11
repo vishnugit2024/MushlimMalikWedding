@@ -1,5 +1,4 @@
 :root {
-    --primary-bg: #800020;
     --accent-color: gold;
     --text-color: #ffffff;
     --box-shadow-color: rgba(0, 0, 0, 0.2);
@@ -16,7 +15,7 @@
   }
   
   .pricing-card {
-    background: var(--primary-bg);
+    background: var(--font-color);
     border: 2px solid var(--accent-color);
     color: var(--text-color);
     border-radius: 10px;
@@ -71,7 +70,7 @@
     display: flex;
     align-items: center;
     margin: 8px 0;
-    color: #ccc; /* Softer text color for better readability */
+    color: #ffffff; /* Softer text color for better readability */
     font-size: 1rem;
   }
   

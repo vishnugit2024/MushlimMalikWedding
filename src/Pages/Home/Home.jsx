@@ -1,15 +1,11 @@
 import React, { useEffect } from "react";
 import "./Home.css";
 import heroimage from "../../Assets/heroimage.png";
-import Storyslider from "../../Components/StorySlider/Storyslider";
-import ImageGallery from "../../Components/Gallery/ImageGallery";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
-import StoryImages from "../../Components/SuccesStory/StoryImages";
 import WeddingPlane from "../../Components/Planes/WeddingPlane";
 import WebsiteSubscribe from "../../Components/Subscribe/WebsiteSubscribe";
-import Feedback from "../../Components/Testimonial/Feedback";
 import { Helmet } from "react-helmet";
 
 const Home = () => {
@@ -31,23 +27,23 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>Find Your Soulmate - Muslim Malik Riste</title>
+        <title>Find Your Soulmate - Muslim Malik Rishte</title>
         <meta
           name="description"
-          content="Discover meaningful connections and celebrate love with Muslim Malik Riste. Find your perfect match today with millions of success stories."
+          content="Discover meaningful connections and celebrate love with Muslim Malik Rishte. Find your perfect match today with millions of success stories."
         />
         <meta
           name="keywords"
-          content="Muslim matchmaking, soulmate, Muslim matrimonial, Malik Riste, perfect match, marriage platform"
+          content="Muslim matchmaking, soulmate, Muslim matrimonial, Malik Rishte, perfect match, marriage platform"
         />
-        <meta name="author" content="Muslim Malik Riste" />
+        <meta name="author" content="Muslim Malik Rishte" />
         <meta
           property="og:title"
-          content="Find Your Soulmate - Muslim Malik Riste"
+          content="Find Your Soulmate - Muslim Malik Rishte"
         />
         <meta
           property="og:description"
-          content="Discover meaningful connections and celebrate love with Muslim Malik Riste. Find your perfect match today with millions of success stories."
+          content="Discover meaningful connections and celebrate love with Muslim Malik Rishte. Find your perfect match today with millions of success stories."
         />
         <meta property="og:image" content={heroimage} />
         <meta property="og:url" content="https://your-website-url.com/" />
@@ -58,11 +54,11 @@ const Home = () => {
         />
         <meta
           name="twitter:title"
-          content="Find Your Soulmate - Muslim Malik Riste"
+          content="Find Your Soulmate - Muslim Malik Rishte"
         />
         <meta
           name="twitter:description"
-          content="Discover meaningful connections and celebrate love with Muslim Malik Riste. Find your perfect match today with millions of success stories."
+          content="Discover meaningful connections and celebrate love with Muslim Malik Rishte. Find your perfect match today with millions of success stories."
         />
         <meta name="twitter:image" content={heroimage} />
       </Helmet>
@@ -71,18 +67,19 @@ const Home = () => {
         <div className="hero-img">
           <img
             src={heroimage}
-            alt="Muslim Malik Riste Banner"
+            alt="Muslim Malik Rishte Banner"
             className="img-fluid"
           />
         </div>
         <div className="hero-text">
           <h1 className="hero-heading">
-            Find Your Soulmate on Muslim Malik Riste
+            Find Your Soulmate on Muslim Malik Rishte
           </h1>
           <div className="hero-para-text">
             <h5 className="hero-paragraph">
-              Discover meaningful connections and celebrate love with millions
-              of success stories. Your perfect match is just a click away.
+            Directly Connect With Your Muslim Malik Community at Muslim Malik Rishte
+            <br />
+            Ab Sabhi Rishte Online
             </h5>
           </div>
 
@@ -94,7 +91,7 @@ const Home = () => {
             </div>
             <div className="mobile-login">
               <Link to="/signup">
-                <button className="hero-login">Sign Up</button>
+                <button className="hero-login">Create Profile</button>
               </Link>
             </div>
             <div className="mobile-login">
@@ -148,7 +145,7 @@ const Home = () => {
               className="match-heading"
               data-aos="fade-up"
               data-aos-anchor-placement="center-center"
-              data-aos-duration="1200"
+              data-aos-duration="800"
             >
               <h2>
                 Discover Your <br /> <span>Perfect Match</span>
@@ -158,12 +155,12 @@ const Home = () => {
         </div>
       </div>
 
-      <section>
+      {/* <section>
         <Storyslider />
       </section>
       <section>
         <StoryImages />
-      </section>
+      </section> */}
       <section>
         <WeddingPlane />
         <div className="button-container">
@@ -172,15 +169,15 @@ const Home = () => {
           </Link>
         </div>
       </section>
-      <section>
+      {/* <section>
         <ImageGallery />
-      </section>
+      </section> */}
       <section>
         <WebsiteSubscribe />
       </section>
-      <section>
+      {/* <section>
         <Feedback />
-      </section>
+      </section> */}
     </>
   );
 };

@@ -1,11 +1,12 @@
 import React from "react";
 import "./SignupPage.css";
+import { Link } from "react-router-dom";
 
 const ContactInfo = ({ formData, handleChange, goToTab }) => {
   return (
     <>
       <div>
-        <h3>Contact Information</h3>
+        <h3>Other Details</h3>
         <form>
           <div className="row">
             <div className="col-md-4">
@@ -42,6 +43,24 @@ const ContactInfo = ({ formData, handleChange, goToTab }) => {
 
             <div className="col-md-4">
               <div className="form-field">
+                <label htmlFor="area" className="label-main">
+                  Area <sup>*</sup>
+                </label>
+                <input
+                  type="text"
+                  id="area"
+                  name="area"
+                  value={formData.area}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="col-md-4">
+              <div className="form-field">
                 <label htmlFor="city" className="label-main">
                   City <sup>*</sup>
                 </label>
@@ -55,9 +74,7 @@ const ContactInfo = ({ formData, handleChange, goToTab }) => {
                 />
               </div>
             </div>
-          </div>
 
-          <div className="row">
             <div className="col-md-4">
               <div className="form-field">
                 <label htmlFor="state" className="label-main">
@@ -89,7 +106,9 @@ const ContactInfo = ({ formData, handleChange, goToTab }) => {
                 />
               </div>
             </div>
+          </div>
 
+          <div className="row">
             <div className="col-md-4">
               <div className="form-field">
                 <label htmlFor="country" className="label-main">
@@ -105,8 +124,62 @@ const ContactInfo = ({ formData, handleChange, goToTab }) => {
                 />
               </div>
             </div>
+
+            <div className="col-md-4">
+              <div className="form-field">
+                <label htmlFor="weddingBudget" className="label-main">
+                  Wedding Budget
+                </label>
+                <input
+                  type="text"
+                  id="weddingBudget"
+                  name="weddingBudget"
+                  value={formData.weddingBudget}
+                  onChange={handleChange}
+                />
+              </div>
+            </div>
+
+            <div className="col-md-4">
+              <div className="form-field gender-style">
+                <label htmlFor="weddingStyle" className="label-main">
+                  Wedding Style <sup>*</sup>
+                </label>
+                <select
+                  id="weddingStyle"
+                  name="weddingStyle"
+                  className="select-style"
+                  value={formData.weddingStyle}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="" disabled>
+                    Select Style
+                  </option>
+                  <option value="Sunnati(Max 15 People)">
+                    Sunnati (Max 15 People)
+                  </option>
+                  <option value="Traditional">Traditional</option>
+                  <option value="Expensive">Expensive</option>
+                </select>
+              </div>
+            </div>
           </div>
 
+          <div className="container my-2">
+            <label>
+              <input type="checkbox" name="acceptTerms" required />I have read
+              and agree to the{" "}
+              <Link to="/termCondition" rel="noopener noreferrer">
+                Terms and Conditions
+              </Link>{" "}
+              and{" "}
+              <Link to="/privacyPolicy" rel="noopener noreferrer">
+                Privacy Policy
+              </Link>
+              
+            </label>
+          </div>
           <button
             type="button"
             className="next-btn login-page-btn"

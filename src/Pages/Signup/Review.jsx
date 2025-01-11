@@ -9,8 +9,8 @@ const Review = ({ formData }) => {
         <div className="row">
           <div className="col-md-4">
             <div className="form-field">
-              <label className="label-main">Name</label>
-              <p className="Signup-Review">{formData.name}</p>
+              <label className="label-main">Full Name</label>
+              <p className="Signup-Review">{formData.fullName}</p>
             </div>
             <div className="form-field">
               <label className="label-main">Age</label>
@@ -31,7 +31,7 @@ const Review = ({ formData }) => {
 
             <div className="form-field">
               <label className="label-main">Grandfather's Name</label>
-              <p className="Signup-Review">{formData.religion}</p>
+              <p className="Signup-Review">{formData.GrandFatherName}</p>
             </div>
             <div className="form-field">
               <label className="label-main">Height</label>
@@ -42,7 +42,7 @@ const Review = ({ formData }) => {
               <p className="Signup-Review">{formData.dob}</p>
             </div>
             <div className="form-field">
-              <label className="label-main">Marital Status</label>
+              <label className="label-main">Married Status</label>
               <p className="Signup-Review">{formData.maritalstatus}</p>
             </div>
             
@@ -50,12 +50,12 @@ const Review = ({ formData }) => {
 
           <div className="col-md-4">
           <div className="form-field">
-              <label className="label-main">Belong (Pehchan)</label>
-              <p className="Signup-Review">{formData.pehchan}</p>
+              <label className="label-main">Family Head</label>
+              <p className="Signup-Review">{formData.FamilyHead}</p>
             </div>
             <div className="form-field">
-              <label className="label-main">Family Occupation Head</label>
-              <p className="Signup-Review">{formData.gotra}</p>
+              <label className="label-main">Family Head Occupation</label>
+              <p className="Signup-Review">{formData.FamilyHeadOccupation}</p>
             </div>
             <div className="form-field">
               <label className="label-main">No. of Brothers</label>
@@ -66,8 +66,8 @@ const Review = ({ formData }) => {
               <p className="Signup-Review">{formData.Sistersiblings}</p>
             </div>
             <div className="form-field">
-              <label className="label-main">Sibling Married Status</label>
-              <p className="Signup-Review">{formData.marriedStatus}</p>
+              <label className="label-main">Belong(Pehchan)</label>
+              <p className="Signup-Review">{formData.pehchan}</p>
             </div>
             <div className="form-field">
               <label className="label-main">Education</label>
@@ -81,17 +81,27 @@ const Review = ({ formData }) => {
               <label className="label-main">Annual Income</label>
               <p className="Signup-Review">{formData.annualIncome}</p>
             </div>
-
             <div className="form-field">
-              <label className="label-main">Phone</label>
-              <p className="Signup-Review">{formData.phone}</p>
+              <label className="label-main">House</label>
+              <p className="Signup-Review">{formData.house}</p>
             </div>
+
+           
           </div>
 
           <div className="col-md-4">
+          <div className="form-field">
+              <label className="label-main">Phone</label>
+              <p className="Signup-Review">{formData.phone}</p>
+            </div>
             <div className="form-field">
               <label className="label-main">Email</label>
               <p className="Signup-Review">{formData.email}</p>
+            </div>
+
+            <div className="form-field">
+              <label className="label-main">Area</label>
+              <p className="Signup-Review">{formData.area}</p>
             </div>
             <div className="form-field">
               <label className="label-main">City</label>
@@ -101,6 +111,7 @@ const Review = ({ formData }) => {
               <label className="label-main">State</label>
               <p className="Signup-Review">{formData.state}</p>
             </div>
+
             <div className="form-field">
               <label className="label-main">Pin Code</label>
               <p className="Signup-Review">{formData.pin}</p>
@@ -108,11 +119,6 @@ const Review = ({ formData }) => {
             <div className="form-field">
               <label className="label-main">Country</label>
               <p className="Signup-Review">{formData.country}</p>
-            </div>
-
-            <div className="form-field">
-              <label className="label-main">Preferred Partner Gender</label>
-              <p className="Signup-Review">{formData.partnerGender}</p>
             </div>
             <div className="form-field">
               <label className="label-main">Wedding Budget</label>

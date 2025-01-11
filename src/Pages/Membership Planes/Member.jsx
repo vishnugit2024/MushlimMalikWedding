@@ -6,7 +6,6 @@ import WeddingPlane from "../../Components/Planes/WeddingPlane";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import WebsiteSubscribe from "../../Components/Subscribe/WebsiteSubscribe";
-import Feedback from "../../Components/Testimonial/Feedback";
 
 const Member = () => {
   useEffect(() => {
@@ -51,7 +50,7 @@ const Member = () => {
   return (
     <>
       <Helmet>
-        <title>Membership Plans | Mushlim Muslim Malik Riste</title>
+        <title>Membership Plans | Mushlim Muslim Malik Rishte</title>
         <meta
           name="description"
           content="Explore our membership plans and start your matchmaking journey today!"
@@ -99,9 +98,9 @@ const Member = () => {
         </div>
       </section>
 
-      <section>
+      {/* <section>
         <Feedback />
-      </section>
+      </section> */}
 
       <section>
         <WebsiteSubscribe />
